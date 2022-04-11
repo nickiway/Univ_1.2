@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <title>Main Page Shkitak</title>
+</head>
+<body>
+    <div id="upTo"></div>
+    <button class = "upTo" onclick="window.location.href = '#upTo' ">Вгору</button>
+    <link rel="import" href="Frames/Lab_1.html">
+    <header>
+        <nav>
+            <ul>
+                <li onclick="showUp('info')">Головна сторінка</li>
+                <li onclick="showUp('Lab_1')">Лаб №1</li>
+                <li onclick="showUp('Lab_2')">Лаб №2</li>
+                <li onclick="showUp('Lab_3')">Лаб №3</li>
+                <li onclick="showUp('Lab_4')">Лаб №4</li>
+                <li onclick="showUp('Lab_5')">Лаб №5</li>
+                <li onclick="showUp('Lab_6')">Лаб №6</li>
+                <li onclick="showUp('project')">Творчий проект</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="info">
+        <div class = "backWhite">
+            <p>
+                <h1>Київський національний університет імені Тараса Шевченка</h1>
+                <h1>Кафедра програмних систем і технологій</h1>
+            </p>
+            <p>
+                <h1>Звіт про виконання лабораторних робіт з дисципліни</h1>
+                <h1>"Основи об'єктно-орієнтованого програмування"</h1>   
+            </p>
+            <h2>Виконав: студент 1 курсу</h2>
+            <h2>Група ІПЗ-11-1</h2>
+            <h2>Шкітак Нікіта Ярославович</h2>
+            <p>
+                <h2>Викладачі: Ковалюк Т. В.</h2>
+            </p>     
+            <p>
+                <h2>Київ-2021</h2>
+            </p>     
+        </div>
+    </div>
+    <!--  LAB_1 -->
+    <div id="Lab_1">
+        <div class = "main">
+            <header>
+                <nav>
+                    <ul>
+                        <li onclick="window.location.href = '#Lab_1_aim',selectItem_lab_1('Lab_1_aim')">Мета</li>
+                        <li onclick="window.location.href = '#Lab_1_task',selectItem_lab_1('Lab_1_task')">Умова </li>
+                        <li onclick="window.location.href = '#Lab_1_analis',selectItem_lab_1('Lab_1_analis')">Аналіз </li>
+                        <li onclick="window.location.href = '#Lab_1_scheme',selectItem_lab_1('Lab_1_scheme')">Блок-схема</li>
+                        <li onclick="window.location.href = '#Lab_1_code',selectItem_lab_1('Lab_1_code')">Код програми</li>
+                        <li onclick="window.location.href = '#Lab_1_result',selectItem_lab_1('Lab_1_result')">Вихідний результат</li>
+                        <li onclick="window.location.href = '#Lab_1_result_analis',selectItem_lab_1('Lab_1_result_analis')">Аналіз достовірності результатів</li>
+                        <li onclick="window.location.href = '#Lab_1_result_conclusion',selectItem_lab_1('Lab_1_result_conclusion')">Висновки</li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 class = "section">Лабораторна робота №1</h1>
+            <div class="section" id = "Lab_1_aim">
+                <h2>Мета роботи:</h2>
+                <p>
+                    <ul class = "aim-list">
+                        <li><h3>Прості обчислення з перетворенням типів даних. Метод Parse;</h3></li>
+                        <li><h3>Прості арифметичні вирази;</h3></li>
+                        <li><h3>Клас Convert;</h3></li>
+                        <li><h3>Перетворення з арифметичного типу в тип string. Метод ToString</h3></li>
+                    </ul>
+                </p>
+            </div>
+            <div class="section" id = "Lab_1_task">
+                <h2>Умова задачі</h2>
+                <p>
+                    <div class="toCenter">
+                        <div class="small-section">
+                        <h3>Написати в C# консольний застосунок, що реалізує завдання згідно з варіантом.</h3>
+                        <h3>Виконання пункту 1 завдання вимагає використання методів класу Console.</h3>
+                        <h3>Виконання пункту 2 завдання вимагає використання методів класу Math.</h3>
+                        <h3>Виконання пункту 3 завдання вимагає використання оператору if.</h3>
+                        <h3>Виконання пункту 4 завдання вимагає використання оператору switch.</h3>
+                        <h3>Виконання пункту 5 завдання вимагає використання оператору циклу.</h3>
+                        </div>
+                    </div>      
+                    <div class="toCenter"><img src="Images/Lab_1/lab_1_condit.png" alt=""></div>
+                </p>
+            </div>
+            
+            <div class="section" id = "Lab_1_analis">
+                <h2>Аналіз задачі</h2>
+                <p>
+                    <h3>Для вирішення завдання №1 :</h3>
+                    <p>Буде використовуватися методи класів <b>Console (WriteLine, Write, ReadLine) </b>та <b>Convert(ToInt32, TryParse)</b>. Користувач вписує власні дані в консоль і потім програма буде виводити це на екран. Також для знаходження площі прямокутника, будемо її знаходити за формулою : S = a * b</p>
+                </p>
+                
+                <p>
+                    <h3>Для вирішення завдання №2 :</h3>
+                    <p>Для знаходження рузультату даної функції ( x=(1-a)*(a+b)/(a-b)+∛(sin⁡〖a^2 〗 )) будемо використовувати методи класу <b>Math (Pow, Sqrt)</b> та методи класів <b>Console (WriteLine, Write, ReadLine) </b></p>
+                </p>
+                
+                <p>
+                    <h3>Для вирішення завдання №3 :</h3>
+                    <p>Для знаходження результату будемо використовувати умовні оператори <b> if , if else , else</b> та методи класів <b>Console (WriteLine, Write, ReadLine) </b></p>
+                </p>
+                
+                <p>
+                    <h3>Для вирішення завдання №4 :</h3>
+                    <p>Використовувати одновимірні статичні масиви, цикли та методи класів <b>Console (WriteLine, Write, ReadLine) </b></p>
+                </p>
+                
+                <p>
+                    <h3>Для вирішення завдання №5 :</h3>
+                    <p>Використовувати цикли, методи класів <b>Console (WriteLine, Write, ReadLine) </b> а також будемо використовувати <b>String</b> так як за умовою використання одновимірних масивів заборонено</p>    
+                </p>
+                
+            </div>
+
+            
+            <div class="section" id = "Lab_1_scheme">
+                <h2>Блок-схема розв'язку</h2>
+                <div class="toCenter">
+                    <div class = "block__section">
+                        <img src="block-schemes/block-schemes_1_2.png" alt="Scheme_1_2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id = "Lab_1_code">
+                <div class="section" id = "Lab_1_code">
+                    <h2>Код програми</h2>
+                    <div class="toCenter"><img src="Images/Lab_1/Colnsole_Lab_1.png" alt=""></div>
+                    <div class="toCenter"><a class = "code__download" href="../Console_Lab1/Console_Lab1/Program.cs"> Завантажити файл (завдання) C#</a></div>
+                </div>
+             </div>
+
+            <!-- Showing up the results -->
+            <div class="section" id = "Lab_1_result">
+                <h2>Результати всіх завдань</h2>
+                <p class = "small-section"></p>
+                <div>
+                    <img class = "codeImages" src="Images/Lab_1/lab_1_result_task_1_1.png" alt="result task 1_1">
+                    <img class = "codeImages" src="Images/Lab_1/lab_1_result_task_1_2.png" alt="result task 1_2">
+                </div>
+            </div>
+
+            <!-- Analising the results of different tasks :  -->
+            <div class="section" id = "Lab_1_result_analis">
+                <h2>Аналіз достовірності результатів</h2>
+                <div class="small-section">
+                    <h3>Завдання №1</h3>
+                    <h3>Всі результати виводять коректно</h3>
+                </div>
+                <div class="small-section">
+                    <h3>Завдання №2</h3>
+                    <h3>В програмі результат  = 28, що приблизно дорівнює нище вказаному результату з малюнку</h3>
+                    <div class = "toCenter"><img  width="50%"  src="Images/Lab_1/an_1.jpg" alt=""></div>
+                </div>
+                <div class="small-section">
+                    <h3>Завдання №3</h3>
+                    <h3>Як ми можемо побачити , умова виконується (при б = 0 , результат = 0)</h3>
+                    <div class = "toCenter"><img src="Images/Lab_1/an_2.png" alt=""></div>
+                </div>
+                <div class="small-section">
+                    <h3>Завдання №4</h3>
+                    <h3>Як ми знаємо, першим кольором веселки є ЧЕРВОНИЙ, тому якщо ми вводимо в програмі 1 - то виводе саме червоний, тому можемо зробити висновок, що програма працює коректно</h3>
+                    <div class = "toCenter"><img src="Images/Lab_1/an_3.png" alt=""></div>
+                </div>
+                <div class="small-section">
+                    <h3>Завдання №5</h3>
+                    <h3>Як ми можемо побачити програма коректно знаходить мінімальне значення оцінки та середнє арифметичне без максимального та мінімального. Результати співпали з калькулятором</h3>
+                    <div class = "toCenter"><img src="Images/Lab_1/an_4.png" alt=""></div>
+                    <div class = "toCenter"><img width="50%"  src="Images/Lab_1/an_5.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <!-- Concluusion :  -->
+            <div class="section" id = "Lab_1_result_conclusion">
+                <h2>Висновок </h2>
+                <br>
+                <p class = "font18">
+                    Було написано 6 методів класу Program для виконання поставлених умов. Труднощів при написані коду не виникло. Виконані всі поставлені умови.
+                    <br><br>
+                    Результати виконання програм були перевірені за допомогою онлайн і звичайного калькулятора (Photomath);
+                    <br><br>
+                    Програма працює правильно, результати виконання збігаються з перевіреними, отже їм можнп довіряти і використовувати код при необхідності.
+
+                </p>
+            </div>
+
+
+        </div>
+    </div>  
+
+
+    <!-- Code to Download (Copy) Lab-1 -->
+    <div id="Lab_1_code_download">
+        <div class = "main">
+            <header>
+                <nav>
+                    <ul>
+                        <li onclick="window.location.href = '#Lab_1_aim',selectItem_lab_1('Lab_1_aim'), showUp('Lab_1')">Мета</li>
+                        <li onclick="window.location.href = '#Lab_1_task',selectItem_lab_1('Lab_1_task'), showUp('Lab_1')">Умова задачі</li>
+                        <li onclick="window.location.href = '#Lab_1_analis',selectItem_lab_1('Lab_1_analis'), showUp('Lab_1')">Аналіз задачі</li>
+                        <li onclick="window.location.href = '#Lab_1_algorithm',selectItem_lab_1('Lab_1_algorithm'), showUp('Lab_1')">Опис алгоритму розв'язання задачі</li>
+                        <li onclick="window.location.href = '#Lab_1_scheme',selectItem_lab_1('Lab_1_scheme'), showUp('Lab_1')">Блок-схема алогортму програми</li>
+                        <li onclick="window.location.href = '#Lab_1_code',selectItem_lab_1('Lab_1_code'), showUp('Lab_1')">Код програми</li>
+                        <li onclick="window.location.href = '#Lab_1_result',selectItem_lab_1('Lab_1_result'), showUp('Lab_1')">Вихідний результат</li>
+                        <li onclick="window.location.href = '#Lab_1_result_analis',selectItem_lab_1('Lab_1_result_analis'), showUp('Lab_1')">Аналіз достовірності результатів</li>
+                        <li onclick="window.location.href = '#Lab_1_result_conclusion',selectItem_lab_1('Lab_1_result_conclusion'),  showUp('Lab_1')">Висновки</li>
+                    </ul>
+                </nav>
+            </header>
+                <!-- Task #1 -->
+                <h2>Task №1</h2>
+                <div class="code-section">
+                    #define _CRT_SECURE_NO_WARNINGS <br>
+                    #include &ltiostream&gt<br>
+                    #include &ltstring&gt<br>
+                    #include &ltconio.h&gt<br>
+                    #include &ltstdio.h&gt<br>
+                    using namespace std;<br>
+                    // functions<br>
+                    void LineDraw() { cout << endl << "---------------------------\n"; } // Creating a method of drawing a row : <br>
+                    int main()<br>
+                    {<br>
+                    // Standart variables to show the methods of the first task : <br>
+                    char exampleChar, randomText[100];<br>
+                    LineDraw();<br>
+                    cout << "Welcome To the task #1! \nIPZ-11_1 Shkitak Nikita" << endl; // Cтандартный выходной поток (stdout в С)<br>
+                    LineDraw();<br>
+                    <br>
+                    // Printf and scanf commands <br>
+                    cout << "Enter a SYMBOL to use commands 'printf' and 'scanf'" << endl;<br>
+                    scanf("%c", &exampleChar); // We have to set '&' element in front of the variable :<br>
+                    cout << "____RESULT____ (using printf) : ";	<br>
+                    printf("%c", exampleChar); // Printf and scanf using for getting elements , judging by the format issue : <br>
+                    <br>
+                    // Cerr command <br>
+                    LineDraw();<br>
+                    cout << "Enter a SYMBOL to use command of output  'cerr'" << endl;<br>
+                    cin >> exampleChar; // Cтандартный входной поток (stdin в С)<br>
+                    cerr << "____RESULT____ (using cerr) : " << exampleChar << endl; // Cerr using as a stream method of warning about errors <br>
+                    //(стандартный поток вывода об ошибках, не буфферизуется в отличии clog and cout )<br>
+                    <br>
+                    // Clog command <br>
+                    LineDraw();<br>
+                    cout << "Enter a SYMBOL to use command of output  'clog' " << endl;<br>
+                    cin >> exampleChar; // Getting char as example<br>
+                    clog << "____RESULT____ (using clog) : " << exampleChar << endl; // Usually using for a logging (everything you want) : <br>
+                    <br>
+                    //Putch and Getch :<br>
+                    LineDraw();<br>
+                    cout << "_putch and _getch function using" << endl; // Interface<br>
+                    cout << "Enter a SYMBOL to show the using of _getch function " << endl;<br>
+                    _cputs("____RESULT____ (using _putch) : "); <br>
+                    _putch(_getch()); // Putch ,getch fuctions<br>
+                    <br>
+                    //Getchar and putchar functions using<br> 
+                    LineDraw();<br>
+                    cout << "Getchar and putchar functions using , enter a SYMBOL " << endl;<br>
+                    cin.ignore(1000, '\n'); // We are using this function to let getchar work<br>
+                    exampleChar = getchar(); // Эта функция эквивалентна getc, которая принимает стандартный поток ввода в качестве аргумента.<br>
+                    cout << "____RESULT____ (using putchar method) : ";<br>
+                    putchar(exampleChar); // This function is used to output items<br>
+                    <br>
+                    // _cscanf_s and _cprintf_s functions using :<br> 
+                    LineDraw();<br>
+                    cout << "Enter a SYMBOL to use _cscanf and _csprint function " << endl;<br>
+                    _cscanf_s("%s", randomText, _countof(randomText)); // _cscanf_s function<br>
+                    cout << endl << "____RESULT____ (using _cprintf) :";<br>
+                    _cprintf("%s", randomText); // _cprintf function <br>
+                    <br>
+                    // Gets_s and puts<br>
+                    LineDraw();<br>
+                    cout << "Gets_s and Puts functions using , enter random SYMBOLS" << endl;<br>
+                    cin.ignore(1000, '\n'); // Ignore to let next function work<br>
+                    gets_s(randomText); // Gettign items to array<br>
+                    cout << "____RESULT____ (using puts) : ";<br>
+                    puts(randomText); // This function is used to output items <br>
+                    <br>
+                    //_Cputs() _cgets()<br>
+                    LineDraw();<br>
+                    cout << "_Cputs() and _cgets() functions using , enter a random SYMBOL" << endl; // Interface<br>
+                    cin >> randomText; // Getting a text to output it with _cputs()<br>
+                    cout << "____RESULT____ (using _Cputs method) : ";<br>
+                    _cputs(randomText); // This function is used to output items<br>
+                    cout << endl << "_cgets function _____DOESN'T WORK_____";<br>
+                    <br>
+                    // Sprintf_s functions<br>
+                    LineDraw();<br>
+                    cout << "Sprintf_s functions using" << endl;<br> 
+                    char buffer[20]; // Setting new Array buffer []<br>
+                    int X, Y; // Var<br>
+                    cout << "Enter parametrs X and Y to create an expression : " ;<br>
+                    cin >> X >> Y;<br>
+                    sprintf_s(buffer, "%d + %d = %d", X, Y, X + Y); // Setting to array the expression<br> 
+                    printf("____RESULT____ (using sprintf_s function), (using X and Y) : %s  \n" ,  buffer); // Output the result of new generated array<br>
+                    <br>
+                    // Sscanf_s functions<br>
+                    LineDraw();<br>
+                    cout << "Sscanf_s functions using" << endl;<br>
+                    char sentence[] = "Robbert older that Max ", output[20]; // The basic string and new output Array <br>
+                    cout << sentence << "  -  Is the the basic sentence" << endl;<br>
+                    int age; // Age setting <br>
+                    cout << "Enter age to create a sentence : ";<br>
+                    cin >> age;<br>
+                    sscanf_s(sentence, "%s ,%*s, %d", output, 20, &age); // Scanf function getting the first word and set it to the output[]<br>
+                    printf("____RESULT____ (using sscanf_s function) : %s is %d years old \n", output, age); // Output with printf function<br>
+                    LineDraw();<br>
+                    system("pause"); // System Pause<br>
+                }<br>
+                </div>
+
+            <!-- Task #3 -->
+                <h2>Task №2</h2>
+                <div class="code-section">
+                    #define _CRT_SECURE_NO_WARNINGS <br>
+                    #include &ltiostream&gt<br>
+                    #include &ltstring&gt<br>
+                    #include &ltcmath&gt<br>
+                    #include &ltconio.h&gt<br>
+                    #include &ltstdio.h&gt<br>
+                    #include &ltfstream&gt<br>
+                    using namespace std;<br>
+                    // functions<br>
+                    void LineDraw() { cout << endl << "---------------------------\n"; } // Creating a method of drawing a row : <br>
+                    int main()<br>
+                    {<br>
+                        // #2 Task<br>	
+                        LineDraw(); <br>
+                        double A, B, C, D = 0;  // Creating 4 vars : <br>
+                        cout << "Welcome To the task #2 !  Shkitak Nikita IPZ-11_1" << endl;<br>
+                        cout << " Enter A, B, C, D parametrs, please" << endl;<br>
+                        while (!(cin >> A >> B >> C >> D)) {<br>
+                            cin.clear();<br>
+                            cout << "You've entered wrong parametrs" << endl;<br>
+                            cin.ignore(numeric_limits&ltstreamsize&gt::max(), '\n');<br>
+                        } // Input <br>
+
+                        double X = (pow(exp(1), A) * cos(B / 2 + D / C)) / (D * C + sin(C)); // Solving <br>
+                        cout << "The result is : " << X << endl; // Output<br>
+                    }<br>
+                </div>
+
+            <!-- Task #3 -->
+                <h2>Task №3</h2>
+                <div class="code-section">
+                    #define _CRT_SECURE_NO_WARNINGS <br>
+                    #include &ltiostream&gt<br>
+                    #include &ltstring&gt<br>
+                    #include &ltcmath&gt<br>
+                    #include &ltconio.h&gt<br>
+                    #include &ltstdio.h&gt<br>
+                    #include &ltfstream&gt<br>
+                    using namespace std;<br>
+                    // functions<br>
+                    void LineDraw() { cout << endl << "---------------------------\n"; } // Creating a method of drawing a row : <br>
+                    int main()<br>
+                    { <br>
+
+                        // #3 Task <br>
+                        LineDraw(); <br>
+                        cout << "Welcome To the task #3 ! (Variant 27) Shkitak Nikita IPZ-11_1" << endl;<br>
+                        unsigned int a, b, c = 0; // Creating 3 unsigned vars : <br>
+                        requires :<br>
+                        LineDraw();<br>
+                        cout << " Enter a, b, c (int) parametrs, please" << endl;<br>
+                        while (!(cin >> a >> b >> c)) {<br>
+                            cin.clear();<br>
+                            cout << "You've entered wrong parametrs";<br>
+                            cin.ignore(numeric_limits&ltstreamsize&gt::max(), '\n');<br>
+                        }<br>
+                        // Input <br>
+                        float p = (a + b + c) / 2, // Solving P / 2<br>
+                            pre_S = (p * (p - a) * (p - b) * (p - c)); // First stage of Herone's formula <br>
+                        if (pre_S <= NULL) { // Checking if the triangular exists : <br>
+                            cout << "Such triangular doesn't exist" << endl << "Try again..." << endl;<br>
+                            cout << "If you want to stop programm , write 'q' else press any key..." << endl;<br>
+                            char item = NULL;<br>
+                            while (!(cin >> item)) {<br>
+                                cin.clear();<br>
+                                cout << "You've entered a wrong parametr" << endl;<br>
+                                cin.ignore(numeric_limits&ltstreamsize&gt::max(), '\n');<br>
+                            }<br>
+                            if (item == 'q' | item == 'Q') exit(0);<br>
+                            else goto requires;<br>
+                        }<br>
+                        else cout << "The S is :  " << sqrt(pre_S) << " sm"; // Checking if the triangular exists : <br>
+                        return 0;<br>
+                    }<br>
+                    
+                </div>
+
+        </div>
+    </div>
+
+    <!--  LAB_2 -->
+    <div id="Lab_2">
+        <div class = "main">
+            <header>
+                <nav>
+                    <ul>
+                        <li onclick="window.location.href = '#Lab_2_aim',selectItem_lab_1('Lab_2_aim')">Мета</li>
+                        <li onclick="window.location.href = '#Lab_2_task',selectItem_lab_1('Lab_2_task')">Умова </li>
+                        <li onclick="window.location.href = '#Lab_2_analis',selectItem_lab_1('Lab_2_analis')">Аналіз </li>
+                        <li onclick="window.location.href = '#Lab_2_scheme',selectItem_lab_1('Lab_2_scheme')">Блок-схема</li>
+                        <li onclick="window.location.href = '#Lab_2_code',selectItem_lab_1('Lab_2_code')">Код програми</li>
+                        <li onclick="window.location.href = '#Lab_2_result',selectItem_lab_1('Lab_2_result')">Вихідний результат</li>
+                        <li onclick="window.location.href = '#Lab_2_result_analis',selectItem_lab_1('Lab_2_result_analis')">Аналіз достовірності результатів</li>
+                        <li onclick="window.location.href = '#Lab_2_result_conclusion',selectItem_lab_1('Lab_2_result_conclusion')">Висновки</li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 class = "section">Лабораторна робота №2</h1>
+            <div class="section" id = "Lab_2_aim">
+                <h2>Мета роботи:</h2>
+                <div class = "small-section">
+                    <ul class = "aim-list">
+                        <li><h3>Робота з масивами в C#</h3></li>
+                        <li><h3>Оператор foreach</h3></li>
+                        <li><h3>Генерація випадкових чисел</h3></li>
+                        <li><h3>Робота з математичними функціями</h3></li>
+                        <li><h3>Лінійний пошук</h3></li>
+                        <li><h3>Двійковий пошук</h3></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section" id = "Lab_2_task">
+                <h2>Умова задачі</h2>
+                <div class = "toCenter">
+                  <img src="Images/Lab_2/lab_2_task_condition_1.png" alt="">
+                </div>
+            </div>
+            
+            <div class="section" id = "Lab_2_analis">
+                <h2>Аналіз задачі</h2>
+                <div class = "small-section">
+                    <br>
+                    <h3>Для виконання завданнь :</h3>
+                    <ol  class = "font18">
+                        <li>Для виконання завдання будемо : використовувати методи класів Console, Convert в процесі введення та виведення даних. Реалізовути перераховані функції. Викликати функції за допомогою меню, застосувавши оператор вибору switch. Для створення масиву і матриці використовувати методи класу Random. Для виконання математичних обчислень використовувати клас Math</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+            <div class="section" id = "Lab_2_scheme">
+                <div class="toCenter">
+                    <div class = "block__section">
+                        <p><h3 class = "margin20 toCenter">Блок-схема завдання №1 :</h3></p>
+                        <img src="block-schemes/block-schemes_2_1.png" alt="Scheme_2_1">
+                    </div>
+                </div>
+                <div class="toCenter">
+                    <div class = "block__section">
+                        <p><h3 class = "margin20 toCenter">Блок-схема завдання №2 :</h3></p>
+                        <img src="block-schemes/block-schemes_2_2.png" alt="Scheme_2_2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id = "Lab_2_code">
+                <h2>Код програми</h2>
+                <!-- code section #1 -->
+                    <h2>Код для завдання №1</h2>
+                    <img class = "codeImages" src="Images/Lab_2/lab_2_code_task_1_1.png" alt="Code task 1-1">
+                <!-- code section #2 -->
+                <p class = "small-section">
+                    <h2>Код для завдання №2</h2>
+                    <img class = "codeImages" src="Images/Lab_2/lab_2_code_task_2_1.png" alt="Code task 2-1">
+                    <img class = "codeImages" src="Images/Lab_2/lab_2_code_task_2_2.png" alt="Code task 2-2">
+                </p>
+                <button class = "codeCopy" onclick = "window.location.href = '#Lab_2_code_download',showUp('Lab_2_code_download')">Завантажити код</button>
+            </div>
+
+            <!-- Showing up the results -->
+            <div class="section" id = "Lab_2_result">
+                <!-- Task #1 -->
+                <h2>Результати всіх завдань</h2>
+                <p class = "small-section"></p>
+                <div>
+                    <h2>Результат завдання №1</h2>
+                    <img class = "codeImages" src="Images/Lab_2/lab_2_result_task_1_1.png" alt="result task 1_1">
+                </div>
+                <!-- Task #2 -->
+                <div>
+                    <h2>Результат завдання №2</h2>
+                    <img class = "codeImages" src="Images/Lab_2/lab_2_result_task_2_1.png" alt="result task 2_1">
+                </div>
+            </div>
+
+            <!-- Analising the results of different tasks :  -->
+            <div class="section" id = "Lab_2_result_analis">
+                <h2>Аналіз достовірності результатів</h2>
+                <p class = "font18">
+                    <!-- Analis task 1 -->
+                    <h2 class = "small-section">Аналіз завдання №1</h2> <br>
+                    <p  class = "font18">В завданні <font class="pointer" color = red>номер №1</font>  за допомогою логічних операторів ми повинні були порахувати значення змінної<font class="pointer"> result</font> відносно значення змінних <font class="pointer">a i b</font></p> 
+                    <div class = "font18">
+                        <h3>Роздивимося три випадки :</h3>
+                        <ul>
+                            <!-- Condition #1 -->
+                            <li>Якщо і а і b більше 0, то result = a^3 / b^2. Відповідно , роздивимося випадок коли а = 2 , b = 1. <br> Якщо підставити дані параметри , то отримаємо <font class="pointer" color = red>8</font>, перевіримо в програмі :</li>
+                            <div class = "margin20">
+                                <img src="Images/Lab_2/lab_2_result_analis_task_1_1.png" alt="Analis 1">
+                            </div>
+                            <!-- Condition #2 -->
+                            <li>Якщо а - більше 0, b - менше 0, то result = a / b. Відповідно , роздивимося випадок коли а = 2 , b = -1. <br> Якщо підставити дані параметри , то отримаємо <font class="pointer" color = red>-2</font>, перевіримо в програмі :</li>
+                            <div class = "margin20">
+                                <img src="Images/Lab_2/lab_2_result_analіs_task_1_2.png" alt="Analis 2">
+                            </div>
+                            <!-- Condition #3 -->
+                            <li>Якщо b дорівнює 0, то result = a^2. Відповідно , роздивимося випадок коли а = 2 , b = 0. <br> Якщо підставити дані параметри , то отримаємо  <font class="pointer" color = red>4</font>, перевіримо в програмі :</li>
+                            <div class = "margin20">
+                                <img src="Images/Lab_2/lab_2_result_analis_task_1_3.png" alt="Analis 3">
+                            </div>
+                            <!-- Condition #4 -->
+                            <li> В інших випадках ми отримуємо result = <font class="pointer" color = red>1</font> , перевіримо :</li>
+                            <div class = "margin20">
+                                <img src="Images/Lab_2/lab_2_result_analis_task_1_4.png" alt="Analis 4">
+                            </div>
+                            <p>Так як всі дані сходяться , то  ми можемо зробити висновок, що програма працює <font class="pointer" color = red>коректно </font>.</p>
+                        </ul>
+                    </div>
+                </p>
+                </div>
+                <div class="section">
+                    <!-- Analis task 2 -->
+                    <h2 class = "small-section">Аналіз завдання №2</h2> <br>
+                    <p  class = "font18"> В завданні <font class="pointer" color = red>номер №2</font> нам потрібно було отримати 3 змінні , треба знайти найбільше та найменше значення по модулю , а також виконавши певні математичні перетворення - знайти найбільше нове число. Перевіримо, чи працює програма правильно : </p>
+                    <div class = "font18">
+                        <p>Введемо значення 1, 2, 3 , відповідно мінімальне число - 1 , а максимальне  - 3.</p>
+                        <div class = "margin20">
+                            <img src="Images/Lab_2/lab_2_result_analis_task_2_1.png" alt="Analis 1">
+                        </div>
+                        <p>Як ми можемо побачити, максимальне та мінімальні числа були знайденні вірно.</p>
+                        <p>Подивимось на другий масив, котрий приймає змінні з певними математичними перетвореннями : <br> x+y+z (1 + 2 + 3) = 6;<br> xy-xz+yz (2 - 3 + 6) = 5; <br> x*y*z (2*3*1) = 6; <br> Як ми можемо побачити , перетворення були виконані вірно. Також програма знайшла вірне максимальне значення з новоутворених - <font class="pointer" color = red>6</font></p>
+                        <p>Так як максимальні і мінмальне значення знаходяться з тим що написано в програмі, то  ми можемо зробити висновок, що програма працює <font class="pointer" color = red>коректно </font>.</p>
+                    </div>
+                </p>
+            </div>
+
+            <!-- Conclusion :  -->
+            <div class="section" id = "Lab_2_result_conclusion">
+                <h2 class = "margin20">Висновок </h2>
+                <ul  class = "font18">
+                    <li>Було написано 2 програми для виконання поставлених умов. Ніяких труднощів при написанні коду не виникло. Виконані всі поставленні умови</li>
+                    <li>Результат виконання програм були перевірені методом підстановки певних аргументів</li>
+                    <li>Під час виконання <font class="pointer">лабораторної роботи №2</font> , були реалізувувані такі логічні функції : <font class="pointer" color = red>if , else if, else, '<' , '>'</font> . </li>
+                    <li>Програми працюють правильно, результати виконання збігаються з перевіреними , отже їм можна довіряти і використовувати при необхідності.</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>  
+
+
+    <!-- Code to Download (Copy) LAB-2 -->
+    <div id="Lab_2_code_download">
+        <div class = "main">
+            <!-- Menu to navigate from that file -->
+            <header>
+                <nav>
+                    <ul>
+                        <li onclick="window.location.href = '#Lab_2_aim',selectItem_lab_2('Lab_2_aim'), showUp('Lab_2')">Мета</li>
+                        <li onclick="window.location.href = '#Lab_2_task',selectItem_lab_2('Lab_2_task'), showUp('Lab_2')">Умова задачі</li>
+                        <li onclick="window.location.href = '#Lab_2_analis',selectItem_lab_2('Lab_2_analis'), showUp('Lab_2')">Аналіз задачі</li>
+                        <li onclick="window.location.href = '#Lab_2_algorithm',selectItem_lab_2('Lab_2_algorithm'), showUp('Lab_2')">Опис алгоритму розв'язання задачі</li>
+                        <li onclick="window.location.href = '#Lab_2_scheme',selectItem_lab_2('Lab_2_scheme'), showUp('Lab_2')">Блок-схема алогортму програми</li>
+                        <li onclick="window.location.href = '#Lab_2_code',selectItem_lab_2('Lab_2_code'), showUp('Lab_2')">Код програми</li>
+                        <li onclick="window.location.href = '#Lab_2_result',selectItem_lab_2('Lab_2_result'), showUp('Lab_2')">Вихідний результат</li>
+                        <li onclick="window.location.href = '#Lab_2_result_analis',selectItem_lab_2('Lab_2_result_analis'), showUp('Lab_2')">Аналіз достовірності результатів</li>
+                        <li onclick="window.location.href = '#Lab_2_result_conclusion',selectItem_lab_2('Lab_2_result_conclusion'),  showUp('Lab_2')">Висновки</li>
+                    </ul>
+                </nav>
+            </header>
+                <!-- Task #1 -->
+                <h2>Task №1</h2>
+                <div class="code-section">
+                    #include &ltcmath&gt <br>
+                        #include &ltiostream&gt<br>
+                        using namespace std;<br>
+                        void ShowLine() { cout << "------------------------ \n"; } // function on drawing a line : <br>
+                        int main()<br>
+                        {<br>
+                            // Task #1   <br>
+                            cout << "Welcome To the task #1 ! (Variant 27) Shkitak Nikita IPZ-11_1" << endl; <br>
+	                        ShowLine();<br>
+                            long double a, b, result;  // Creating variables and Arrays :<br>
+                            cout << "Task #1";<br>
+                            cout << endl << "Enter the A , B parametr :  " << endl; // Asking to enter a parametr A :<br> 
+                            while (!(cin >> a >> b)) {<br>
+                                cin.clear();<br>
+                                cout << "You've entered wrong parametrs \n";<br>
+                                cout << endl << "Enter the A , B parametr :  " << endl; 
+                                cin.ignore(numeric_limits&ltstreamsize&gt::max(), '\n');<br>
+                            }<br>
+                            // Main part<br>
+                            if (b > 0 && a > 0) result = pow(a, 3) / pow(b, 2); // The condition of solving the taks #1 : <br>
+                                else if (b < 0 && a > 0) result = a / b;<br>
+                                    else if (b == 0) result = pow(a, 2);<br>
+                                        else result = 1;<br>
+                            cout << "The result is : " << result << endl; // Output result : <br>
+                        }<br>                        
+                </div>
+                <h2>Task #2</h2>
+                <div class="code-section">
+                        #include &ltcmath&gt <br>
+                        #include &ltiostream&gt <br>
+                        using namespace std; <br>
+                        void ShowLine() { cout << "------------------------ \n"; } // function on drawing a line : <br>
+                        int main() <br>
+                        { <br>
+                            cout << "Welcome To the task #2 ! (Variant 27) Shkitak Nikita IPZ-11_1" << endl; <br>
+                            ShowLine();<br>
+                            int min, max, // Creating variables and Arrays :<br>
+                                numbers[3], modifyNumbers[3];<br>
+                            // Task #2 <br>
+                            cout << "Task #2" << endl;<br>
+                            // Input <br>
+                            cout << "Enter the X , Y, Z parametr : " << endl;<br>
+                            while (!(cin >> numbers[0] >> numbers[1] >> numbers[2]))<br>
+                            {<br>
+                                cout << "You've entered wrong parametrs \n";<br>
+                                cout << "Enter the X , Y, Z parametr : " << endl;<br>
+                                cin.clear();<br>
+                                cin.ignore(numeric_limits<streamsize>::max(), '\n');<br>
+                            }<br>
+                            // Setting max and min variables : <br>
+                            max = numbers[0], <br>
+                                min = numbers[0];<br>
+                            // Getting max and min from the array : <br>
+                            for (size_t i = 1; i < 3; i++) {<br>
+                                if (abs(max) < abs(numbers[i])) max = numbers[i];<br>
+                                if (abs(min) > abs(numbers[i])) min = numbers[i];<br>
+                            }<br>
+                            ShowLine();<br>
+                            // Output the result : <br>
+                            cout << "The largest is (with ABS) : " << max << endl;<br>
+                            cout << "The lowest is (with ABS) : " << min << endl;<br>
+                            //modifyNumbers and setting new values : <br>
+                            modifyNumbers[0] = numbers[0] + numbers[1] + numbers[2],<br>
+                            modifyNumbers[1] = numbers[0] * numbers[1] - numbers[0] * numbers[2] + numbers[1] * numbers[2],<br>
+                            modifyNumbers[2] = numbers[0] * numbers[1] * numbers[2];<br>
+                            ShowLine();<br>
+                            // Showing a new modified array to the user : <br>
+                            cout << "  A modified array : " << endl;<br>
+                            for (size_t i = 0; i < 3; i++)<br>
+                                cout << "- Element #" << i + 1 << " : " << modifyNumbers[i] << endl;<br>
+                            // Setting new max value : <br>
+                            max = modifyNumbers[0];<br>
+                            // Getting the biggest value of a new array : <br>
+                            for (size_t i = 1; i < 3; i++)<br>
+                                if (max < modifyNumbers[i]) max = modifyNumbers[i];<br>
+                            ShowLine();<br>
+                            // Output result :<br>
+                            cout << "The largest is : " << max << endl;<br>
+                        }  <br>
+                </div>
+        </div>
+    </div>
+    <!-- LAB_3 -->
+        <div id="Lab_3">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_3_aim',selectItem_lab_3('Lab_3_aim')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_3_task',selectItem_lab_3('Lab_3_task')">Умова </li>
+                            <li onclick="window.location.href = '#Lab_3_analis',selectItem_lab_3('Lab_3_analis')">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_3_algorithm',selectItem_lab_3('Lab_3_algorithm')">Опис алгоритму розв'язаків</li>
+                            <li onclick="window.location.href = '#Lab_3_scheme',selectItem_lab_3('Lab_3_scheme')">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_3_code',selectItem_lab_3('Lab_3_code')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_3_result',selectItem_lab_3('Lab_3_result')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_3_result_analis',selectItem_lab_3('Lab_3_result_analis')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_3_result_conclusion',selectItem_lab_3('Lab_3_result_conclusion')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №3</h1>
+                <div class="section" id = "Lab_3_aim">
+                    <h2>Мета роботи:</h2>
+                    <div class = "small-section">
+                        <ul class = "aim-list">
+                            <li><h3>Вивчити особливості циклічних обчислювальних процесів</h3></li>
+                            <li><h3>Опанувати технологію використання операторів циклів</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми циклічних процесів</h3></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id = "Lab_3_task">
+                    <h2>Умова задачі</h2>
+                    <div class = "small-section">
+                        <h3>Завдання</h3>
+                        <div class = "font18">Знайти суму ряду по заданій формулі :
+                            <div><img src="Images/Lab_3/lab_3_task_condition_1.png" alt="task_3_1"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section" id = "Lab_3_analis">
+                    <h2>Аналіз задачі</h2>
+                    <div class = "small-section">
+                        <h3>Аналіз завдання</h3>
+                        <br>
+                        <ul  class = "font18">
+                            <li>З даного рівняння ми можемо побачити , що зовнішня сума рахується при Х є від <font class="pointer">1 до 5</font> , тому доцільно використовувати цикл <font class="pointer" color = red>FOR.</font></li>
+                            <li>Зовнішня сума рахується від <font class="pointer">0 до нескінченності </font>, отже буде доцільно використовувати цикл <font class="pointer" color =red>WHILE</font></li>
+                            <li>Для того, щоб цикл не відбувався безкінечну кількість раз, ми вводимо поняття точності , а також досліджуємо кожний новий елемент внутрішньої суми на дотирмання певних обмежень : якщо за модулем він вийшов з діапазону <font class="pointer">від 10^-38 до 10^38</font>, що означає <font class="pointer" color = red>Overflow</font> або якщо ж поточий елемент менше заданої точності, то ми переходимо до наступного елемента зовнішньої суми (Збільшуємо Х на 1)</li>
+                            <li>Варто зазначити , що ми накладаємо модуль на елемент при перевірці так як в залежності від порядку елемента К (внутрішньої суми) значення буде змінювати свій знак (при к - непарні - буде значення елементу менше 0) , відповідно при парних значення - більше </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_3_algorithm">
+                    <h2>Опис алгоритму розв'язання задач </h2>
+                    <div class = "small-section">
+                        <h3>Для виконання завдання:</h3>
+                        <br>
+                        <ul  class = "font18">
+                            <li>Під'єднуємо бібліотеки <font class="pointer" color = red >cmath , iomanip</font> для використання математичних операцій , а також для більш зручного виводу даних </li>
+                            <li>Створюємо нові змінні <font class="pointer" >sum = 0 , number , nextNumber, error , k</font></li>
+                            <li>Просимо ввести значення <font class="pointer">error</font> - мінімально допустимого числа (точність), також перевіряємо дану змінну на правильність введення формату за допомогою циклу <font class="pointer" color = red>while</font></li>
+                            <li>Створюємо самостійно дві функції : функція по знаходженню факторіала та функція для возведення числа в ступінь ( <font class="pointer" color =red >Factorial() , CustomPow()</font> відповідно )</li>
+                            <li>За допомого циклу <font class="pointer" color = red>for</font> знаходимо суму , що буде складатися з п'яти елементів. Дані п'ять елементів будуть рахуватися циклом <font class="pointer" color = red>while</font> у вигляді також суми с поточних елементів , що є результатом виразу, даного в умові </li>
+                            <li>Знаходимо суму циклу, додаючи поточний елементу до змінної sum <font class="pointer">(sum += number)</font></li>
+                            <li>Виводимо поточне значення суми, елемент K, X, та елемент, який додавали до суми (<font class="pointer">number</font>) </li>
+                            <li>За допомогою логічного оператора <font class="pointer" color = red>if</font> ми перевіряємо чи поточний елемент внутрішньої суми не більше <font class="pointer">error</font> , якщо ж быльше , то ми зупиняємо цикл <font class="pointer" color =red >while</font></li>
+                            <li>Якщо ж попередня умова виконується , тоді знаходимо значення наступного елементу (<font class="pointer">nextNumber</font>) після поточного , якщо значення виходить за встановленні діапазони , то ми завершуємо работу цикла <font class="pointer" color = red> while</font> с елементом Х , виводимо повідомлення , що відбувається переповнення (<font class="pointer" color = red>Overflow</font>) і починаємо новий цикл , вже працюючи з елементом  ( Х + 1 )</li>
+                            <li>Після виконання циклу <font class="pointer" color = red>for</font> виводимо значення суми <font class="pointer" color =red>sum</font></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+                <div class="section" id = "Lab_3_scheme">
+                    <h2>Блок-схема розв'язку задачи №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №1 :</h3></p>
+                            <img src="block-schemes/block-schemes_3_1.png" alt="Scheme_3_1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_3_code">
+                    <h2>Код програми</h2>
+                    <!-- code section #1 -->
+                    <p class = "small-section"></p>
+                        <h2>Код завдання</h2>
+                        <img class = "codeImages" src="Images/Lab_3/lab_3_code_task_1_1.png" alt="Code task 1-1">
+                        <img class = "codeImages" src="Images/Lab_3/lab_3_code_task_1_2.png" alt="Code task 1-1">
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_3_code_download',showUp('Lab_3_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_3_result">
+                    <!-- Task #1 -->
+                    <h2>Результати завдання</h2>
+                    <p class = "small-section"></p>
+                    <div>
+                        <h2>Результат завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_3/lab_3_result_task_1_1.png" alt="result task 1_1">
+                        <img class = "codeImages" src="Images/Lab_3/lab_3_result_task_1_2.png" alt="result task 1_2">
+                    </div>
+                  
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_3_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <p class = "font18">
+                        <!-- Analis task 1 -->
+                        <h2 class = "small-section">Аналіз завдання</h2> <br>
+                        <h3>Для достовірності роздивимося випадок коли у нас Х = 1, відповідно , значення суми співпадає з результатом онлайн калькулятора, через що ми можемо зробити висновок , що програма працює <font class="pointer" color = red>коректно</font>. При досягненні заданих користувачем точності та граничних значень <font class="pointer">(від 10^-38 до 10^38)</font> програма зупиняється, в даному прикладу точність задана менше ніж граничні значення, тому вона ніяк не впливає на суму ряду</h3>
+                        <div class="toCenter">
+                            <img src="Images/Lab_3/lab_3_result_analis_task_1_1.png" style = "width:50%" alt="Analis task 1">
+                            <img src="Images/Lab_3/lab_3_result_analis_task_1_2.png" style = "width:50%" alt="Analis task 2">
+                        </div>
+                    </p>
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_3_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написано програму, яка розраховує суму ряду. Виконано всі поставлені умови, труднощів не виникло;</li>
+                        <li>Результати виконання були перевірені підстановкою значень, а також за допомогою калькулятора (Сума ряду онлайн);</li>
+                        <li>Програма працює правильно, результати виконання збігаються з перевіреними, при досягненні одного з "кінців" розрахунку програма завершується. Отже їй можна довіряти і використовувати при необхідності.</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-3 -->
+        <div id="Lab_3_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_3_aim',selectItem_lab_3('Lab_3_aim'), showUp('Lab_3')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_3_task',selectItem_lab_3('Lab_3_task'), showUp('Lab_3')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_3_analis',selectItem_lab_3('Lab_3_analis'), showUp('Lab_3')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_3_algorithm',selectItem_lab_3('Lab_3_algorithm'), showUp('Lab_3')">Опис алгоритму розв'язання задачі</li>
+                            <li onclick="window.location.href = '#Lab_3_scheme',selectItem_lab_3('Lab_3_scheme'), showUp('Lab_3')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_3_code',selectItem_lab_3('Lab_3_code'), showUp('Lab_3')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_3_result',selectItem_lab_3('Lab_3_result'), showUp('Lab_3')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_3_result_analis',selectItem_lab_3('Lab_3_result_analis'), showUp('Lab_3')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_3_result_conclusion',selectItem_lab_3('Lab_3_result_conclusion'),  showUp('Lab_3')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <h2>Task №1</h2>
+                    <div class="code-section">
+                        #include &ltcmath&gt <br>
+                            #include &ltiostream&gt<br>
+                            #include &ltiomanip&gt<br>
+                            using namespace std; <br>
+                            double Factorial(int item) { // Calculating factorial :<br>
+                                long double factorial = 1; // base factorial <br>
+                                for (size_t i = 1; i <= item; i++)<br>
+                                    factorial *= i; // Calculating factorial :<br>
+                                return factorial; // Return factorial<br>
+                            }<br>
+                            long double CustomPow(double X, int N) // Custom power function :<br>
+                            {<br>
+                                long double result = 1; // Setting a base var<br>
+                                if (N > 0) // Case if the n > 0<br>
+                                    for (int i = 0; i < N; i++)<br>
+                                        result *= X;<br>
+                                else if (N < 0)  // Case if the n is less than 1<br>
+                                    for (int i = 0; i < abs(N); i++)<br>
+                                        result /= X;<br>
+                                else return 1;<br>
+                                return result; // Return resutl<br>
+                            }<br>
+                            // Function to draw interface :<br>
+                            void LineDraw() { cout << "=============================================================<br>==========================================================" << endl;  }<br>
+                            void OverflowDraw(){ cout << "===============================================  Overflow  ==========================================================" << endl; }<br>
+                            int main()<br>
+                            {<br>
+                                cout << "Lab work no 3" << endl; // Interface : <br>
+                                cout << "Nikita Shkita IPZ-11-1, Variant 27 (5)" << endl; // Interface : <br>
+                                double sum = 0, number, nextNumber, error; // Setting new variables : <br>
+                                long int k; <br>
+                                cout << "Enter error item (accuracy) , please" << endl;<br>
+                                while (!(cin >> error)) // Checking error on correct format :<br>
+                                {<br>
+                                    cin.clear(); // Clearing cin stream <br>
+                                    cout << "You've entered a wrong Error, try again : " << endl; // Output error message<br>
+                                    cin.ignore(numeric_limits&ltstreamsize&gt::max(), '\n'); // Stopping while <br>
+                                }<br>
+                                cout << " 5   Infinity" << endl; // Interface of a task : <br>
+                                cout << "SUM(   SUM(     ( (-1)^k * x^(k+2) ) / ( (k + 1) * (k + 2)! )    ) )" << endl;<br>
+                                cout << "x=1   k=0" << endl;<br>
+                                LineDraw();<br>
+                                cout << setw(20) << "X" << setw(20) << "K" << setw(20) << "NUMBER" << setw(20) << "SUM" << setw(20) << endl; // Drawing interface :<br>
+                                LineDraw();<br>
+                                for (size_t x = 1; x <= 5; x++) // Calculating the sum :<br>
+                                { <br>
+                                    k = 0, number = 1, nextNumber = 1; // Setting new vars<br>
+                                     while (abs(nextNumber) < CustomPow(10, 38) && abs(nextNumber) > CustomPow(10, -38)) // Condition of working 'while' : <br>
+                                    {<br>
+                                        number = (CustomPow(-1, k) * CustomPow(x, k + 2)) / ((k + 1.0) * Factorial(k + 2)); // Item to calculate under SUM : <br>
+                                        if (fabs(number) < error && k > 0)  // Case if the error is lower than is allowed<br>
+                                        {<br>
+                                            LineDraw(); // Interface drawing<br>
+                                            break; // Stopping while :<br>
+                                        }<br>
+                                        sum += number; // Sum calculating<br>
+                                        cout << setw(20) << x << setw(20) << k << setw(20) << number << setw(20) << sum << setw(20) << endl; // Drawing a table item : <br>
+                                        k++; // Increment : <br>
+                                        nextNumber = (CustomPow(-1, k) * CustomPow(x, k + 2)) / ((k + 1.0) * Factorial(k + 2)); // Item to calculate under SUM :<br>
+                                     }<br>
+                                    if (abs(nextNumber) > CustomPow(10, 38) || abs(nextNumber) < CustomPow(10, -38))<br>
+                                        OverflowDraw();  // Showing that variable is overflow : <br>
+                                }<br>
+                                cout << "The sum is  = " << fixed << setprecision(15) << sum << endl; // The result : <br>
+                            }<br>
+                    </div>
+                  
+            </div>
+        </div>
+
+
+
+        <!-- LAB_4 -->
+        <div id="Lab_4">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_4_aim',selectItem_lab_4('Lab_4_aim')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_4_task',selectItem_lab_4('Lab_4_task')">Умова </li>
+                            <li onclick="window.location.href = '#Lab_4_analis',selectItem_lab_4('Lab_4_analis')">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_4_algorithm',selectItem_lab_4('Lab_4_algorithm')">Опис алгоритму розв'язаків</li>
+                            <li onclick="window.location.href = '#Lab_4_scheme',selectItem_lab_4('Lab_4_scheme')">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_4_code',selectItem_lab_4('Lab_4_code')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_4_result',selectItem_lab_4('Lab_4_result')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_4_result_analis',selectItem_lab_4('Lab_4_result_analis')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_4_result_conclusion',selectItem_lab_4('Lab_4_result_conclusion')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №4</h1>
+                <div class="section" id = "Lab_4_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Вивчити особливості циклічних обчислювальних процесів з розгалуженнями</h3></li>
+                            <li><h3>Опанувати технологію рекурентних обчислень</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми розвинення функцій у ряди</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_4_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">Обчислити значення функції, розвинувши її у ряд Маклорена (або Тейлора) з табличним поданням результатів розрахунків. Завдання подані в таблиці 4.2 по варіантах. Розрахунок суми ряду запрограмувати функцією користувача, використавши рекурентні співвідношення згідно з таблицею , що подана на вкладці "Теоретичні відомості".</p>
+                            <div><img src="Images/Lab_4/lab_4_task_condition_1.png" alt="task_1_1"></div>
+                        </div>
+                        <!-- Task #2 -->
+                        <h3>Завдання №2</h3>
+                        <div class = "font18">
+                            <p class="small-section">Обчислити ланцюгові дроби, степеневі ряди, розв'язати комбінаторні задачі відповідно до варіантів, поданих в таблиці</p>
+                            <div><img src="Images/Lab_4/lab_4_task_condition_2.png" alt="task_2_1"></div>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_4_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для знаходження кореня ми будемо використовувати еквівалентну функцію , розвинуту у <font class="pointer" color = red> ряд Тейлора</font></li>
+                            <li>Дослідивши дані нам вирази ми можемо сказати , що при умові коли Х є [-1; 1), значення виразу при Х є [-1; 0] будуть давати під корнем від'ємне чило, або 0 , на який ми будемо ділити чисельник, тому ОДЗ : Х є (0; 2]</li>
+                            <li> В завданні ми використовуємо рекурентні співвідношення, які відбуваються доки різниця між двома проміжними елементами не буде менше ніж задана точність , тому буде доречно використовувати цикл <font class="pointer" color = red>Do While</font></li>
+                            <li> Також за умовою задачі при різних <font class="pointer">Х</font> ми знаходимо значення різних виразів ,тому будемо використовувати логічний оператор <font class="pointer" color = red>IF</font> для того щоб програма працювала коректно відносно певного значення <font class="pointer">Х</font></li>
+                           <li> Так як за умовою після кожної операції ми збільшуємо значення <font class="pointer">Х</font> на заданий користувачем крок, то будемо використовувати цикл <font class = "pointer" color = red>FOR</font> для того щоб знаходити значення виразів відносно новоутвореного <font class="pointer">Х</font>.</li>
+                        </ul>
+                    </div >
+                    <!-- Task #2 -->
+                    <div  class = "small-section">
+                        <h3>Аналіз завдання №2: </h3>
+                        <ul  class = "font18">
+                            <li> Так як у нас нескінечний дріб , то ми будемо виконувати певні дії циклічно поки за заданої умови, тому буде доцільно використовувати <font class="pointer" color = red> WHILE </font></li>
+                            <li> Також для виконання певних логічних операцій ми будемо використовувати логічний оператор <font class="pointer" color = red>IF</font></li>
+                        </ul>
+                    </div >
+                </div>
+
+                <div class="section" id = "Lab_4_algorithm">
+                    <h2>Опис алгоритму розв'язання задач </h2>
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №1:</h3>
+                        <ul  class = "font18">
+                            <li>Під'єднуємо бібліотеки <font class="pointer" color = red> cmath , iomanip </font>для використання математичних операцій , а також для більш зручного виводу даних</li>
+                            <li>Використовуючи метод розвинення у ряд Тейлор створюємо функцію <font class="pointer" color = red>SQRT()</font> по знаходженню корення з числа</li>
+                            <li>Cтворюємо змінні <font class="pointer">x, y, error = 0, step = 0</font> , це початкове значення , кінцеве значення , мінімальне значення поточного елементу (похибка) та крок, на який буде збільшуватися значення X</li>
+                            <li>Просимо ввести значення всіх 4 змінних у консоль</li>
+                            <li>За допомогою циклу <font class="pointer" color =red>WHILE</font> ми перевіряємо чи всі значення були введені у вірному форматі</li>
+                            <li>За допомогою логічного оператора <font class="pointer" color =red > IF</font> ми перевіряємо яке значення Х (більше чи менше 1) , відповідно до результату ми виконуємо певні операції над числом Х , виводячи проміжні результати , використовуючи цикл <font class="pointer" color = red>FOR</font></li>
+                            <li>Так як у нас ОДЗ : Х є (0; 2] , то при значеннях Х менше 0 будемо виводити "Function is not defined" замість значень функції</li>
+                        </ul>
+                    </div>
+
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №2:</h3>
+                        <ul  class = "font18">
+                            <li>Під'єднуємо бібліотеки <font class="pointer" color = red> cmath , iomanip </font>для використання математичних операцій , а також для більш зручного виводу даних</li>
+                            <li>Cтворюємо змінні <font class="pointer"> Item,  count</font> , це змінна над якою ми будемо проводити операції з нескінченним дробом , а також кількість операцій дробу , відповідно</li>
+                            <li>Знаходимо значення останнього змаменника у бескінечному дробу</li>
+                            <li>За допомогою рекурентних співвідношень, використовуючи цикл <font class="pointer" color = red>WHILE</font> знаходимо  значення <font class="pointer">Усього дробу</font></li>
+                            <li>Додаємо до значення дробу <font class="pointer">3</font> і отримуємо кінцеве значення змінної Item , що приблизно дорівнює <font class="pointer">PI</font></li>                            
+                            <li>За допомогою функції<font class="pointer"> setprecision()</font> виводимо 50 знаків після крапки у дробному числі Item</li>                            
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+                <div class="section" id = "Lab_4_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку задачи №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №1 :</h3></p>
+                            <img src="block-schemes/block-schemes_4_1.png" alt="Scheme_4_1">
+                        </div>
+                    </div>
+                    <!-- Task #2  -->
+                    <h2>Блок-схема розв'язку задачи №2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №2 :</h3></p>
+                            <img src="block-schemes/block-schemes_4_2.png" alt="Scheme_4_2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_4_code">
+                    <h2>Код програми</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_4/lab_4_code_task_1_1.png" alt="Code task 1-1">
+                        <img class = "codeImages" src="Images/Lab_4/lab_4_code_task_1_2.png" alt="Code task 1-1">
+                    </div>
+                    <!-- code section #2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_4/lab_4_code_task_2_1.png" alt="Code task 2-1">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_4_code_download',showUp('Lab_4_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_4_result">
+                    <h2>Результати завдання</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_4/lab_4_result_task_1_1.png" alt="result task 1_1">
+                    </div>
+                   <!-- Task #2 -->
+                   <div class = "small-section">
+                        <h2>Результат завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_4/lab_4_result_task_2_1.png" alt="result task 1_1">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_4_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <!-- Analis task 1 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #1</h2> <br>
+                        <div class = "small-section">
+                            <h3>Як ми можемо побачити с демонстрації роботи програми на зображенні похибка між результатами виразів , які ми шукали використовуючи в одному випадку метод розвинення у ряд Тейлора , а в іншому - стандартну функцію кореня  - мінімальні . Також , підставивши вираз у гугл-калькулятор - ми отримаємо ідентичний результат як і в програмі, с чого можна зробити висновок , що програма працює вірно.</h3>
+                        </div>
+                        <div class="toCenter">
+                            <img src="Images/Lab_4/lab_4_task_result_analis_1_2.png" style = "width:50%" alt="Analis task 1.1">
+                            <img src="Images/Lab_4/lab_4_task_result_analis_1_1.png" style = "width:50%" alt="Analis task 1.2">
+                        </div>
+                    </div>
+
+                    <!-- Analis task 2 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #2</h2> <br>
+                        <div class = "small-section">
+                            <h3>Як ми можемо побачити результат програми та значення числа ПІ ідентичні , с чого ми можемо зробити висновок , що програма працює коректно.</h3>
+                        </div>
+                        <div>
+                            <img src="Images/Lab_4/lab_4_result_task_2_1.png" style = "width:100%" alt="Analis task 2.1">
+                            <h1>Значення числа ПІ : </h1>
+                            <p><h1> <font class="pinter" color = red> 3,1415926535897932384626433832795…</font></h1></p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_4_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написано дві програми : <br><br> 1) Перша - знаходить значення виразу , в яких є функція "Корінь", використовуючи метод розвинення у ряд Тейлора <br> 2) Друга - знаходить значення нескінечного дробу. <br> Виконано всі поставлені умови, труднощів не виникло;</li>
+                        <li>Результати виконання були перевірені підстановкою значень, а також за допомогою різних калькуляторів (Photomath, Google);</li>
+                        <li>Програми працють правильно, результати виконання збігаються з перевіреними, при досягненні заданої точності або кількості операцій над змінною - програма завершується. Отже їй можна довіряти і використовувати при необхідності</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-3 -->
+        <div id="Lab_4_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_4_aim', showUp('Lab_4')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_4_task', showUp('Lab_4')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_4_analis', showUp('Lab_4')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_4_algorithm', showUp('Lab_4')">Опис алгоритму розв'язання задачі</li>
+                            <li onclick="window.location.href = '#Lab_4_scheme', showUp('Lab_4')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_4_code', showUp('Lab_4')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_4_result',showUp('Lab_4')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_4_result_analis', showUp('Lab_4')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_4_result_conclusion',  showUp('Lab_4')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <h2>Task №1</h2>
+                    <div class="code-section">
+                        #include &ltcmath&gt <br>
+                            #include &ltiostream&gt<br>
+                            #include &ltiomanip&gt<br>
+                            using namespace std; <br>
+                            void LineDraw() { cout << "__________________________________________________________________" << endl; } // Linedraw function <br>
+                            long double SQRT(long double x, long double ERROR) { // Custom function to find square <br>
+                                double itemY(1),itemY0(1); // setting first and second items<br>
+                                do <br>
+                                {<br>
+                                    itemY0 = itemY;<br>
+                                    itemY = 0.5 * (itemY0 + x / itemY0); // Finding square of x, using tailor's strings  <br>
+                                } while (fabs(itemY - itemY0) > ERROR); // The condition of accuracy<br>
+                                return itemY; // return result<br>
+                            }<br>
+                            int main()<br>
+                            {	<br>
+                                double x, y, error = 0, step = 0; // Creating new variables<br>
+                                cout << "Lab. work no. 4" << endl; // interface<br>
+                                cout << "Welcome to the task no 1. Created by Shkitak Nikita. V-27 (3)" << endl; // interface<br>
+                                LineDraw(); <br>
+                                cout << "if X is [1 ; 2] =>   Y = sqrt(15 - x^2)" << endl << "if X is [-1; 1) =>   Y = 1 / sqrt(x + x^2) " << endl;<br>
+                                cout << "Enter Xstart parametr (from -1 to 2), Xfinish parametr (from -1	 to 2) , ACCURACY, STEP" << endl;<br>
+                                while (!(cin >> x >> y >> error >> step) || (x < -1) | (x > 2) | (y < -1) | (y > 2) | (error == 0) | (step <= 0) | (x > y)) { // Checking if data input is correct<br> 
+                                    cin.clear(); // clearing the previous cin<br>
+                                    cout << "You've entered wrong parametrs, try again" << endl; // Output error<br>
+                                    cin.ignore(numeric_limits&ltstreamsize>::max(), '\n'); // ignoring to stop while's loop<br>
+                                }<br>
+                                LineDraw();<br>
+                                cout << setw(19) << "X" << setw(19) << "Y" << setw(21) << "STANDART" << setw(20) << "ERROR" << endl; // Outputting results<br>
+                                LineDraw();<br>
+                                if (x < 1) { // Case if x < 1<br>
+                                    double item;<br>
+                                    y > 1 ? item = 1 : item = y;<br>
+                                    for (size_t i = x; x <= item + 1e-8; x += step) { // Using for to show using of custom SQRT()<br>
+                                        if (x <= 0) cout << setw(20) << x << setw(40) << "Function is not defined." << endl;<br>
+                                        else cout << setw(20) << x << setw(20) << 1.0 / SQRT(x + x * x, error) << setw(20) << 1.0 / sqrt(x + x * x) << setw(20) << fabs((1.0 <br>
+                                            / SQRT(x + x * x, error)) - (1.0 / sqrt(x + x * x))) << endl;<br>
+                                        if (round(x * 1000) / 1000 == -round(step * 1000) / 1000) // Case of machine zero :<br>
+                                            x += step, cout << setw(20) << "0" << setw(40) << "Function is not defined." << endl;<br>
+                                    }<br>
+                                }<br>
+                                if(x >= 1) { // Case if x >= 1<br>
+                                    for (size_t i = x; x <= y + 1e-8; x += step) // Using for to show using of custom SQRT() <br>
+                                        cout << setw(20) << x << setw(20) << SQRT(15 - x*x, error) << setw(20) << sqrt(15 - x * x) << setw(20) << fabs(SQRT(15 - x * x, error)<br>
+                                            - sqrt(15 - x * x)) << endl;<br>
+                                }<br>
+                                LineDraw(); <br>
+                                return 0;<br>
+                            }<br>
+                    </div>
+
+                    <!-- Task #1 -->
+                    <h2>Task №2</h2>
+                    <div class="code-section">
+                        #include &ltcmath&gt <br>
+                            #include &ltiostream&gt<br>
+                            #include &ltiomanip&gt<br>
+                            using namespace std; <br>
+                            void LineDraw() { cout << "_______________________________________________________________________________________________________________" << endl; } // Linedraw function <br>
+                            int main()<br>
+                            {<br>
+                                long double Item; long int count; // The maximum argument in chain fractions<br>
+                                cout << "Lab. work no. 4" << endl; // interface<br>
+                                cout << "Welcome to the task no 2. Created by Shkitak Nikita. V-27 (7)" << endl; // interface<br>
+                                LineDraw(); <br>
+                                cout << "Enter number of operations (integer) : ";  // Asking to enter the number of operations<br>
+                                while (!(cin >> count)) { // Entering the count<br>
+                                    cin.clear();<br>
+                                    cout << "You've entered a wrong format of parametr" << endl;<br>
+                                    cin.ignore(numeric_limits&ltstreamsize>::max(), '\n');<br>
+                                }<br>
+                                Item = ((count * 2.0 - 1.0) * (count * 2.0 - 1.0)) / ((count * 2.0 + 1.0) * (count * 2.0 + 1.0)); // The lowest item in chain fractions<br>
+                                count != 1 ? Item += 6 : Item += 3; // Analising the count : if it 2+ we are adding 6 , if count = 1 we have to add 3 as in expression<br>
+                                count--; // Decrement as we find the lowest item in chain fractions<br>
+                                while (count > 0) // Calculating the expression of PI untill the last steps<br>
+                                {<br>
+                                    Item = ((count * 2.0 - 1.0) * (count * 2.0 - 1.0)) / Item; <br>
+                                    count != 1 ? Item += 6 : Item += 3; // Analising the count : if it 2+ we are adding 6 , if count = 1 we have to add 3 as in expression<br>
+                                    count--; // Decrement<br>
+                                }<br>
+                                cout << fixed << std::setprecision(50) << "Result of endless chain fraction : " << Item << endl; // Setting precision to show that PI is founded<br>
+                                LineDraw(); // Interface building <br>
+                            }<br>
+                    </div>
+                  
+            </div>
+        </div>
+
+
+        <!-- LAB_5 -->
+        <div id="Lab_5">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_5_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_5_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_5_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_5_algorithm'">Опис алгоритму розв'язаків</li>
+                            <li onclick="window.location.href = '#Lab_5_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_5_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_5_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_5_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_5_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №5</h1>
+                <div class="section" id = "Lab_5_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Вивчити особливості рекурсивних процесів</h3></li>
+                            <li><h3>Опанувати технологію рекурсивних обчислень</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням рекурсивних функцій</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_5_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">Увести з клавіатури два цілих додатних числа m>0 та n>0. Розробити рекурсивну функцію, яка обчислює площу трикутника на основі рекурентного співвідношення:</p>
+                            <div><img src="Images/Lab_5/lab_5_task_condition_1.png" alt="task_1_1"></div>
+                            <p class="small-section">Реалізувати ітеративний варіант функції, використовуючи оператор циклу. Порівняти ефективність рекурсивної та ітеративної реалізацій, визначивши глибину рекурсії та кількість ітерацій циклу.</p>
+                        </div>
+                        <!-- Task #2 -->
+                        <h3>Завдання №2</h3>
+                        <div class = "font18">
+                            <p class="small-section">Увести з клавіатури натуральне число n > 1. Перевірити, чи є воно простим. Програма повинна вивести слово YES, якщо число просте і NO, якщо число складене. Алгоритм повинен мати складність O (√n). Для застосування рекурсії для цієї задачі потрібно робити рекурсію за параметром, яким є дільник числа. Контрольний тест: введено число 6, отриманий результат: NO.	</p>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_5_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Так як нам потрібно знайти площу тільки по двом сторонам , а про кут між ними нічого не говориться, то sin кута = 1 , відповіно даний трикутник -  <font class="pointer" color = red>прямокутний</font> , а дві сторони - катети трикутника</li>
+                            <li>Щоб знайти площу сторони трикутника повинні існувати <font class="pointer">сторони більше 0</font></li>
+                            <li>Для знаходження результату за допомогою рекурсії , ми будемо використовувати наданий нам алгоритм , тобто  при значенні параметра n більше 1 будемо додавати параметр m до кінцевого результату площі , зменшуючи параметр n</li>
+                            <li>При значенні параметра m більше 1 будемо додавати до кінцевого результату площі по одиниці і зменшувати значення параметра m</li>
+                            <li>Коли значення обох параметрів будуть дорівнювати 1 , ми додаємо до кінцевого результату площі ще одницю , отримуючи подвоєну площю прямокутного трикутника.</li>
+                            <li>Також при виконанні вище зазначених операцій будемо рахувати глибину рекурсії , тобто кількість виконаних операцій в цілому</li>
+                            <li>Для виконання даної задачі будемо використовувати два методи : знаходження площі за допомогою рекурсії та за допомогою ітераційного методу (знайдемо також кількість ітераційних операцій), для того щоб порівняти відповіді і упевнитися в їх правильності</li>
+                        </ul>
+                    </div >
+                    <!-- Task #2 -->
+                    <div  class = "small-section">
+                        <h3>Аналіз завдання №2: </h3>
+                        <ul  class = "font18">
+                            <li>Нам задано досліджуване число , яке треба дослідити на факт того чи є воно простим, для цього ми будемо ділити поетапно на числа які менше нього (від 2 включно до самого досліджуваного числа не включно) , якщо число ділиться хоча б на одне з запропанованих дільників , то ми робимо висновок , що число - не є простим</li>
+                            <li>Але нам також треба мати на увазі, що число повинно бути додатним , не дорівнювати 0 , а також 1 (так як це число не є ні простим , ні складним)</li>
+                            <li>Якщо число просте програма повинна вивести - "YES" , ящко число складне - "NO"</li>
+                        </ul>
+                    </div >
+                </div>
+
+                <div class="section" id = "Lab_5_algorithm">
+                    <h2>Опис алгоритму розв'язання задач </h2>
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №1:</h3>
+                        <ul  class = "font18">
+                            <li>Утворюємо глолбальні змінні <font class="pointer">SquareRecursion(Реультат рекурсії), SquareIterator(Результат методом ітератора), counter(Кількість ітераційних операцій), RecursionCounter(Глибина рекурсії)</font></li>
+                            <li>Створюємо функції <font class="pointer" color =red>GetSquareRecursion() та GetSquareIterator()</font> , які будуть знаходити результати методом рекурсії та ітераційним методом , відповідно </li>
+                            <li>Просимо ввести дві сторони користувачем</li>
+                            <li>Перевіряємо сторони на правильність вводу за форматом  , а також щоб вони не були менше або дорівнювали 0</li>
+                            <li>Використовуючи <font class="pointer">вище зазначений алгоритм</font> знаходимо значення площі трикутника та глубину рекурсії (кількість ітераційних операцій), використовуючи обидві функції</li>
+                            <li>Виводимо дані на екран</li>
+                        </ul>
+                    </div>
+
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №2:</h3>
+                        <ul  class = "font18">
+                            <li>Утворюємо глолбальну змінну <font class="pointer">counter(кількість дільник досліджуваного числа)</font></li>
+                            <li>Створюємо функцію <font class="pointer" color =red>SimpleNumber()</font> , яка буде повертати bool (1 or 0) </li>
+                            <li>Просимо ввести досліджуване число</li>
+                            <li>Перевіряємо його на правильність формату</li>
+                            <li>Використовуючи <font class="pointer">вище зазначений алгоритм</font> знаходимо кількість дільників (counter) досліджуваного числа</li>
+                            <li>Якщо counter = 0 , функція повертає 1 , а програма виводить "YES", в іншому випадку програма виводить "NO"</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+                <div class="section" id = "Lab_5_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку задачи №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №1 :</h3></p>
+                            <img src="block-schemes/block-schemes_5_1.png" alt="Scheme_4_1">
+                        </div>
+                    </div>
+                    <!-- Task #2  -->
+                    <h2>Блок-схема розв'язку задачи №2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №2 :</h3></p>
+                            <img src="block-schemes/block-schemes_5_2.png" alt="Scheme_4_2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_5_code">
+                    <h2>Код програми</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_1_1.png" alt="Code task 1-1">
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_1_2.png" alt="Code task 1-2">
+                    </div>
+                    <!-- code section #2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_2_1.png" alt="Code task 2-1">
+                    </div>
+                    <!-- Python version : -->
+                    <h2>Код програми версії (Python)</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_1_1_python_version.png" alt="Code task 1-1_py">
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_1_2_python_version.png" alt="Code task 1-2_py">
+                    </div>
+                    <!-- code section #2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_code_task_2_1_python_version.png" alt="Code task 2-1_py">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_5_code_download',showUp('Lab_5_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_5_result">
+                    <h2>Результати завдання</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_result_task_1_1.png" alt="result task 1_1">
+                    </div>
+                   <!-- Task #2 -->
+                   <div class = "small-section">
+                        <h2>Результат завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_5/lab_5_result_task_2_1.png" alt="result task 1_1">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_5_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <!-- Analis task 1 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #1</h2> <br>
+                        <div class = "small-section">
+                            <h3>Підставивши значення таких двух сторон : 44 і 33 прямокутного трикутника , програма виведе нам результат (Площу) , який дорівнює 726. Такий же результат демонутрує нам і онлайн калькулятор. Тому ми можемо зробити висновок , що програма працює <font class="pointer" color = red>коректно</font></h3>
+                        </div>
+                        <div class = "toCenter">
+                            <img src="Images/Lab_5/lab_5_task_result_analis_1_2.png" style = "width:75%" alt="Analis task 1.1">
+                            <img src="Images/Lab_5/lab_5_task_result_analis_1_1.png" style = "width:75%" alt="Analis task 1.2">
+                        </div>
+                    </div>
+
+                    <!-- Analis task 2 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #2</h2> <br>
+                        <div class = "small-section">
+                            <h3>Як ми можемо побачити число 97 просте з нижче вказаної таблиці. Програма також дослідила,  що данне число просте , тому ми можемо зробити висновок, що програма працює <font class="pointer" color = red>коректно</font></h3>
+                        </div>
+                        <div class = "toCenter">
+                            <img src="Images/Lab_5/lab_5_task_result_analis_2_1.png" style = "width:50%" alt="Analis task 2.1">
+                            <img src="Images/Lab_5/lab_5_result_task_2_1.png" style = "width:50%" alt="Analis task 2.1">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_5_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написано дві програми : <br><br> 1) Перша - знаходить площу прямокутного трикутника за двома , наданами сторонами; <br> 2) Друга - досліджує надане число на <font class="pointer">простоту</font>; <br> Виконано всі поставлені умови, труднощів не виникло;</li>
+                        <li>Результати виконання були перевірені підстановкою значень, а також за допомогою різних калькуляторів ("Онлайн калькулятор. Площадь треугольника", Google);</li>
+                        <li>Програми працюють правильно, результати виконання збігаються з перевіреними;</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-3 -->
+        <div id="Lab_5_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_5_aim', showUp('Lab_5')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_5_task', showUp('Lab_5')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_5_analis', showUp('Lab_5')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_5_algorithm', showUp('Lab_5')">Опис алгоритму розв'язання задачі</li>
+                            <li onclick="window.location.href = '#Lab_5_scheme', showUp('Lab_5')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_5_code', showUp('Lab_5')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_5_result', showUp('Lab_5')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_5_result_analis', showUp('Lab_5')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_5_result_conclusion',  showUp('Lab_5')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task №1 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_05_24092021/Lab_05_24092021_task_1/Lab_05_24092021_task_1.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class="code-section">
+                        <h2>Task №2 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_05_24092021/Lab_05_24092021_task_2/Lab_05_24092021_task_2.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #1 Python -->
+                    <div class="code-section">
+                        <h2>Task №1 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_05_24092021/Python_version/lab_05_pythonVersion_task_1/lab_05_pythonVersion_task_1/lab_05_pythonVersion_task_1.py"> Завантажити файл (завдання №1) Python</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 Python -->
+                    <div class="code-section">
+                        <h2>Task №2 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_05_24092021/Python_version/lab_05_pythonVersion_task_1/lab_05_pythonVersion_task_2/lab_05_pythonVersion_task_2.py"> Завантажити файл (завдання №1) Python</a>
+                        </div>
+                    </div>
+                  
+            </div>
+        </div>
+
+
+         <!-- LAB_6 -->
+         <div id="Lab_6">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_6_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_6_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_6_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_6_algorithm'">Опис алгоритму розв'язаків</li>
+                            <li onclick="window.location.href = '#Lab_6_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_6_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_6_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_6_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_6_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №6</h1>
+                <div class="section" id = "Lab_6_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Ознайомитися з особливостями типу масиву</h3></li>
+                            <li><h3>Опанувати технологію застосування масивів даних</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням одновимірних масивів</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_6_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">Створити одновимірний масив, кількість елементів якого ввести з клавіатури. Передбачити меню вибору способу створення масиву: введення з клавіатури або генерація псевдовипадкових чисел. Обчислити суму елементів між максимальним та мінімальними значеннями масиву. Вивести на екран максимальний, мінімальний елементи масиву, їх індекси та шукану суму елементів</p>
+                        </div>
+                        <!-- Task #2 -->
+                        <h3>Завдання №2</h3>
+                        <div class = "font18">
+                            <p class="small-section"> Створити одновимірний масив, кількість елементів якого ввести з клавіатури. Передбачити меню вибору способу створення масиву: введення з клавіатури або генерація псевдовипадкових чисел. Відсортувати масив за алгоритмом cортування гнома (Gnome Sort)  та здійснити пошук в масиві за алгоритмом ітераційного бінарного пошуку  . Передбачити виведення проміжних результатів в процесі виконання ітерацій сортування масиву</p>
+                        </div>
+                        <!-- Task #3 -->
+                        <h3>Завдання №3</h3>
+                        <div class = "font18">
+                            <p class="small-section"> 3.3. Увести з клавіатури степінь n >2 та коефіцієнти многочлена.</p>
+                            <div><img src="Images/Lab_6/lab_6_task_condition_1.png" alt="task_1_1"></div>
+                            <p class="small-section">Значення деяких коефіцієнтів можуть дорівнювати нулю. Знайти всі нулі многочлена і розкласти його на множники з дійсними коефіцієнтами, якщо відомий один з його нулі . Вивести на екран вирази, що є коренями многочлена.</p>
+                            <div><img src="Images/Lab_6/lab_6_task_condition_2.png" alt="task_1_2"></div>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_6_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання даного завдання ми будемо притримуватися наведенного нам алгоритму</li>
+                            <li>Для виконання завдання ми будемо використовувати одновимірний статичний масив</li>
+                            <li>Вводимо можливість генерувавити масив самостійно або випадковими числами</li>
+                            <li>Знаходимо максимальне та мінімальне</li>
+                            <li>Знаходимо суму між данними числами</li>
+                        </ul>
+                    </div >
+                    <!-- Task #2 -->
+                    <div  class = "small-section">
+                        <h3>Аналіз завдання №2: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання даного завдання ми будемо притримуватися наведенного нам алгоритму</li>
+                            <li>Для виконання завдання ми будемо використовувати одновимірний статичний масив</li>
+                            <li>Вводимо можливість генерувавити масив самостійно або випадковими числами</li>
+                            <li>Будемо сортувати масив за алгоритмом сортування гнома "Gnome sort"</li>
+                            <li>А також реалізуємо пошук за алгоритмом бінарного пошуку </li>
+                            <li>Також повинні передбачити виведення проміжних результатів при сортуванні </li>
+                        </ul>
+                    </div >
+                    <!-- Task #3 -->
+                    <div  class = "small-section">
+                        <h3>Аналіз завдання №3: </h3>
+                        <ul  class = "font18">
+                            <li>Для знаходження кореів поліному ми повинні використовувати певні математичні методи : (таблиця Горнера  а також теорема Безу)</li>
+                            <li>Знайдемо за теоремою Безу всі раціональні корені</li>
+                            <li>Далі за знайденеми кореннями використовуючи схему Горнера ми перетворюємо поліном на добуток більш менших за ступенем многочленів</li>
+                            <li>Якщо залишаеться многочлен степеня більше 2 , знаходимо якщо існують раціональні корені.</li>
+                            <li>Якщо ж більше немає ірраціональних коренів а у нас залишається многочлен більше 1го ступення ми знаходимо всі комлексні коренні за наданим алгоритмом та виводимо результати </li>
+                        </ul>
+                    </div >
+                </div>
+
+                <div class="section" id = "Lab_6_algorithm">
+                    <h2>Опис алгоритму розв'язання задач </h2>
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №1:</h3>
+                        <ul  class = "font18">
+                            <li>Запрошуємо у користувача обрати метод створення масиву </li>
+                            <li>Запрошуємо у користувача довжину масиву </li>
+                            <li>Якщо користувач обирає створити самотужки то він заполняє масиви самотужки, у випадку коли він обирає автоматичне створення то ми генеруємо масив псевдовипадковими числами</li>
+                            <li>Далі знаходимо максимальний та мінімальний елементи</li>
+                            <li>Знаходимо суму між даними елементами ( сума знаходилася вже у відсортованному масиві , так як в умові не було уточненно за якої умови саме шукати суму тобто сумували всі елементи між мінімальним та максимальним)</li>
+                            <li>Виводимо кінцеві результати</li>
+                        </ul>
+                    </div>
+
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №2:</h3>
+                        <ul  class = "font18">
+                            <li>Запрошуємо у користувача обрати метод створення масиву </li>
+                            <li>Запрошуємо у користувача довжину масиву </li>
+                            <li>Якщо користувач обирає створити самотужки то він заполняє масиви самотужки, у випадку коли він обирає автоматичне створення то ми генеруємо масив псевдовипадковими числами</li>
+                            <li>Питаємо у користувача чи бажає він бачити процес сортування масиву , якщо так то ми будемо виводити проміжні результати сортування</li>
+                            <li>Сортуємо наш масив за методом сортування гнома </li>
+                            <li>Далі запитуємо у користувача який саме елемент масиву він бажає знайти</li>
+                            <li>За допомогою методу бінарного пошуку знаходимо індекс шуканого елементу , у випадку якщо елемент не знайдено : просимо ввести новий елемент пошуку ще раз , або натиснути літеру "q" для завершення програми</li>
+                        </ul>
+                    </div>
+
+                    <div class = "small-section">
+                        <h3>Алгоритм виконання завдання №3:</h3>
+                        <ul  class = "font18">
+                            <li>Просимо користувача ввести значчення максимального степення поліному </li>
+                            <li>Далі просимо ввести користувача коефіцієнти для кожно ступпення</li>
+                            <li>За допоомою теореми Безу знаходимо цілі коренні полінома</li>
+                            <li>Перетворюємо наш заданий спочатку поліном на добуток многочленнів : <font class="pointer" color = red>(x -(мінус) корінь)</font> за допомогою схеми Герона</li>
+                            <li>Якщо у добутки досі присутній многочлен ступення більше 1го , знаходимо іраціональні коренні(якщо максимальний ступінь - 2 ) в іншому випадку знаходимо комплексні коренні за наданим нам алгоритмом </li>
+                            <li>Якщо при діленні на певну константу для знаходження комплексних кореннів не відбувається цілого ділення , то программа не може знайди комплексні коренні</li>
+                            <li>В іншому випадку знаходимо коренні</li>
+                            <li>Виводимо перетворенний полніом (добуток многочленнів) та виводимо всі можливі коренні (як існуючі , так і комплексні)</li>
+                            <h2>Схема горнера та теорема Безу (Метод знаходження раціональних коренів) відповідно</h2>
+                            <div class = "toCenter">
+                                <img src="Images/Lab_6/lab_6_task_3_algorithm.png" alt="task_3_1">
+                                <img src="Images/Lab_6/lab_6_task_3_algorithm_2.png" alt="task_3_1" width="90%">
+                            </div>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+                <div class="section" id = "Lab_6_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку задачи №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №1 :</h3></p>
+                            <img src="block-schemes/block-schemes_6_1.png" alt="Scheme_6_1">
+                        </div>
+                    </div>
+                    <!-- Task #2  -->
+                    <h2>Блок-схема розв'язку задачи №2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №2 :</h3></p>
+                            <img src="block-schemes/block-schemes_6_2.png" alt="Scheme_6_2">
+                        </div>
+                    </div>
+                    <!-- Task #3  -->
+                    <h2>Блок-схема розв'язку задачи №3</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №3 :</h3></p>
+                            <img src="block-schemes/block-schemes_6_3.png" alt="Scheme_6_3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_6_code">
+                    <h2>Код програми</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_1_1.png" alt="Code task 1-1">
+                    </div>
+                    <!-- code section #2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_1_2.png" alt="Code task 2-1">
+                    </div>
+                    <!-- code section #3 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №3</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_1_3.png" alt="Code task 3_1">
+                    </div>
+                    <!-- Python -->
+                    <!-- Task 1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1 (Python)</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_1_python_version.png" alt="Code task 1-1_py">
+                    </div>
+                    <!-- Task 2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2 (Python)</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_2_python_version.png" alt="Code task 2-1_py">
+                    </div>
+                    <!-- Task 3 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №3 (Python)</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_code_task_3_python_version.png" alt="Code task 3-1_py">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_6_code_download',showUp('Lab_6_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_6_result">
+                    <h2>Результати завдання</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_result_task_1.png" alt="result task 1">
+                    </div>
+                    <!-- Task #2 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_result_task_2.png" alt="result task 2">
+                    </div>
+                    <!-- Task #3 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №3</h2>
+                        <img class = "codeImages" src="Images/Lab_6/lab_6_result_task_3.png" alt="result task 3">
+                    </div>
+            
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_6_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <!-- Analis task 1 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #1 та завдання #2</h2> <br>
+                        <div class = "small-section">
+                            <h3>Як ми можемо побачити з вихідного результату , программа працює коректно , так як всі умови, що були поставленні в задачі -  виконуються </h3>
+                        </div>
+                    </div>
+
+                    <!-- Analis task 3 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #3</h2> <br>
+                        <div class = "small-section">
+                            <h3>Підставивши контрольний тест , що був наданий нам в постановці задачи , ми можемо побачити, що відповіді збігаються с чого можно зробити висновок , що программа працює коректно</h3>
+                        </div>
+                        <div class = "toCenter">
+                            <img src="Images/Lab_6/lab_6_result_task_3.png" style = "width:50%" alt="Analis task 3">
+                            <img src="Images/Lab_6/lab_6_task_result_analis_1_2.png" style = "width:50%" alt="Analis task 3">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_6_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написано три програми : <br><br> 1) Перша - генерує одновимірний масив 2 різними методами (генерує користувач, генерує програма випадковими числами),  далі знаходиться сума між максимальним та мінімальним елементами масива; <br> 2) Друга - сортує масив методом <font class="pointer" color = red>гнома</font> , після сортування відбувається знаходження елемента за допомогою <font class="pointer" color = red>бінарного пошуку</font> ;<br> 3) Третя - знаходить корені поліном N-ої степені (як раціональні так і комлексні) ;  <br> Виконано всі поставлені умови, труднощів не виникло. Але під час виконання завдань бінарний пошук був написаний рекурсивним методом, так як це є більш ефективно , аніж ітераційний. Також використовувалися класи для розв'язання завдання №3, так як було зручніше стовирити окремий екземпляр класу для праці над ним ;</li>
+                        <li>Результати виконання були перевірені підстановкою значень, а також за допомогою різних джерел (надані контрольні тести в умові);</li>
+                        <li>Програми працюють правильно, результати виконання збігаються з перевіреними;</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-6 -->
+        <div id="Lab_6_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_6_aim', showUp('Lab_6')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_6_task', showUp('Lab_6')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_6_analis', showUp('Lab_6')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_6_algorithm', showUp('Lab_6')">Опис алгоритму розв'язання задачі</li>
+                            <li onclick="window.location.href = '#Lab_6_scheme', showUp('Lab_6')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_6_code', showUp('Lab_6')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_6_result', showUp('Lab_6')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_6_result_analis', showUp('Lab_6')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_6_result_conclusion',  showUp('Lab_6')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task №1 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_06_24092021/Lab_06_24092021/Lab_06_24092021_task_01/Lab_06_24092021_task_01.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class="code-section">
+                        <h2>Task №2 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_06_24092021/Lab_06_24092021/Lab_06_24092021_task_02/Lab_06_24092021_task_02.cpp"> Завантажити файл (завдання №2) C++</a>
+                        </div>
+                    </div>
+                    <div class="code-section">
+                        <h2>Task №3 С++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_06_24092021/Lab_06_24092021/Lab_06_24092021_task_03/Lab_06_24092021_task_03.cpp"> Завантажити файл  (завдання №3) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #1 Python -->
+                    <div class="code-section">
+                        <h2>Task №1 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_06_24092021/Pyhon_Version/lab_6_python_version/lab_6_python_version_task_1/lab_6_python_version_task_1.py"> Завантажити файл (завдання №1) Python</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 Python -->
+                    <div class="code-section">
+                        <h2>Task №2 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_06_24092021/Pyhon_Version/lab_6_python_version/lab_6_python_version_task_2/lab_6_python_version_task_2.py"> Завантажити файл (завдання №2) Python</a>
+                        </div>
+                    </div>
+                  <!-- Task #3 Python -->
+                  <div class="code-section">
+                    <h2>Task №3 Python</h2>
+                    <div class="toCenter">
+                        <a class = "code__download" href="Labs/Lab_06_24092021/Pyhon_Version/lab_6_python_version/lab_6_python_version_task_3/lab_6_python_version_task_3.py"> Завантажити файл (завдання №3) Python</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- LAB_7 -->
+         <div id="Lab_7">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_7_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_7_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_7_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_7_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_7_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_7_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_7_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_7_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №7</h1>
+                <div class="section" id = "Lab_7_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Ознайомитися з особливостями двувимірного масиву</h3></li>
+                            <li><h3>Опанувати технологію застосування двовимірних масивів даних</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням двовимірних масивів</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_7_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">Створити квадратну матрицю, розмірність якої n>=3 ввести з клавіатури. Передбачити меню вибору способу створення матриці: введення з клавіатури або генерація псевдовипадкових додатніх та від'ємних чисел. У створеній квадратній матриці відсортувати елементи на головній діагоналі за алгоритмом вставки, елементи на діагоналях, що паралельні головній, за алгоритмом обміну (бульбашковим). Визначити суму значень елементів, що розташовані нижче головній діагоналі і є додатніми. Замінити від'ємні елементи, що знаходяться вище головної діагоналі, на отриману суму. Надрукувати вхідну матрицю у вигляді рядків і стовпчиків, матрицю після сортування елементів на діагоналях, шукану суму елементів, матрицю після заміни.</p>
+                        </div>
+                        <!-- Task #2 -->
+                        <h3>Завдання №2</h3>
+                        <div class = "font18">
+                            <p class="small-section">Транспонувати матрицю A, задавши з клавіатури її вимірність. В транспонованій матриці її рядки та стовпці міняються місцями: . Передбачити використання неквадратних матриць. Для вибору способу створення матриці використовувати меню: введення значень елементів матриці з клавіатури або генерація псевдовипадкових чисел в заданому з клавіатури діапазоні значень. Для перевірки властивостей матриці:створити матрицю B тої самої вимірності, що і у вхідній матриці. Вивести на екран вхідну матрицю, транспоновану та результати перевірки її властивостей.</p>
+                            <div>
+                                <img src="Images/Lab_7/lab_7_task_condition_1.png" alt="condition">
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_7_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання даного завдання ми будемо притримуватися наведенного нам алгоритму</li>
+                            <li>Тому створюємо матрицю (двовимріний масив)</li>
+                            <li>Далі просимо корстувача обрати яким методом буде сгенерована матриця (користувач сам введе значення чи матриця буде заповнена випадковими числами)</li>
+                            <li>Далі просимо ввести довжину <font class="pointer" color =red>квадратної матриці</font> </li>
+                            <li>Заповнюємо матрицю числами</li>
+                            <li>Сортуємо головну діагональ матриці за аглоритмом виборки</li>
+                            <li>Сортуємо паралельні діагоналі до головної за бульбашковим методом </li>
+                            <li>Знаходимо суму всіх доданіх елементів , що знаходяться нище головної діагоналі</li>
+                            <li>Замінюємо всі від'ємні числа , що знаходяться вище головної діагоналі на знайденну  суму</li>
+                            <li>Виводимо перетворену матрицю</li>
+                        </ul>
+                    </ul>
+                    </div >
+                    <!-- Task #2 -->
+                    <div  class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання даного завдання ми будемо притримуватися наведенного нам алгоритму</li>
+                            <li>Тому створюємо матриці (двовимріні масиви)</li>
+                            <li>Далі просимо корстувача обрати яким методом буде сгенеровані 2 матриці (користувач сам введе значення чи матриця буде заповнена випадковими числами)</li>
+                            <li>Далі просимо ввести кількість стовпців та рядків матриць</li>
+                            <li>Заповнюємо матриці числами</li>
+                            <li>Далі транспонуємо їх для того </li>
+                            <li>Перевіряємо дві поставленні умови с транспонованими матрицями</li>
+                            <li>Виводимо результати дослідження</li>
+                        </ul>
+                    </div >
+                </div>
+
+
+                <!-- Блок-схема для розв'язку завданя №2 та №3 для лабораторної роботи №1 -->
+                <div class="section" id = "Lab_7_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку задачи №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №1 :</h3></p>
+                            <img src="block-schemes/block-schemes_7_1.png" alt="Scheme_7_1">
+                        </div>
+                    </div>
+                    <!-- Task #2  -->
+                    <h2>Блок-схема розв'язку задачи №2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <p><h3 class = "margin20">Блок-схема завдання №2 :</h3></p>
+                            <img src="block-schemes/block-schemes_7_2.png" alt="Scheme_7_2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_7_code">
+                    <h2>Код програми</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_code_task_1_1.png" alt="Code task 1-1">
+                    </div>
+                    <!-- code section #2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_code_task_1_2.png" alt="Code task 2-1">
+                    </div>
+                    <!-- Python -->
+                    <!-- Task 1 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №1 (Python)</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_code_task_1_python_version.png" alt="Code task 1-1_py">
+                    </div>
+                    <!-- Task 2 -->
+                    <div class = "small-section">
+                        <h2>Код завдання №2 (Python)</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_code_task_2_python_version.png" alt="Code task 2-1_py">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_7_code_download',showUp('Lab_7_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_7_result">
+                    <h2>Результати завдання</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №1</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_result_task_1.png" alt="result task 1">
+                    </div>
+                    <!-- Task #2 -->
+                    <div class = "small-section">
+                        <h2>Результат завдання №2</h2>
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_result_task_2_1.png" alt="result task 2">
+                        <img class = "codeImages" src="Images/Lab_7/lab_7_result_task_2_2.png" alt="result task 3">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_7_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <!-- Analis task 1 -->
+                    <div class = "font18 small-section">
+                        <h2 class = "small-section">Аналіз завдання #1 та завдання #2</h2> <br>
+                        <div class = "small-section">
+                            <h3>Аналізуючи вихідні результати , що були наведені вище і порівнявши умови , поставленні у завданні , ми можемо сказати , що програма №1 працює  <font class="pointer" color = red>коректно</font> . <br> Щодо програми №2 : нам було поставлена задача перевірити на виконання 2 властивості с транспонованими матрицями, аналізуючи всі  ті ж результати , ми можемо  зробити висновок , що програма №2 працює також <font class="pointer" color = red>коректно</font></h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_7_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написано дві програми : <br><br> 1) Перша - генерує квадритичну матрицю , яку программа сортуємо по діагоналям (головній і паралельним до неї), також виконує певні розрахунки (знаходить суму) , і перетворення матриці (замінює від'ємні елементи, розташовані вище головної діагоналі на значення суми); <br> 2) Друга - утворює 2 матриці , транспонує дані матриці , після чого перевіряє певні властивості транспанованих матриць ( вони були наведені вище ) ;</li>
+                        <li>Результати виконання були перевірені підстановкою значень, а також за допомогою різних джерел (надані властивості в умові;</li>
+                        <li>Програми працюють правильно, результати виконання перевірені і є коректними,  отже їм можна довіряти і користуватися ними</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-6 -->
+        <div id="Lab_7_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_7_aim', showUp('Lab_7')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_7_task', showUp('Lab_7')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_7_analis', showUp('Lab_7')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_7_scheme', showUp('Lab_7')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_7_code', showUp('Lab_7')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_7_result', showUp('Lab_7')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_7_result_analis', showUp('Lab_7')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_7_result_conclusion',  showUp('Lab_7')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task №1 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_07_29102021/lab_07_29102021/lab_07_29102021_task_1/lab_07_29102021_task_1.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class="code-section">
+                        <h2>Task №2 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_07_29102021/lab_07_29102021/lab_07_29102021_task_2/lab_07_29102021_task_2.cpp"> Завантажити файл (завдання №2) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #1 Python -->
+                    <div class="code-section">
+                        <h2>Task №1 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_07_29102021/lab_07_29102021_python/lab_07_03112021/lab_07_03112021_task_1/lab_07_03112021_task_1.py"> Завантажити файл (завдання №1) Python</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 Python -->
+                    <div class="code-section">
+                        <h2>Task №2 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_07_29102021/lab_07_29102021_python/lab_07_03112021/lab_07_03112021_task_2/lab_07_03112021_task_2.py"> Завантажити файл (завдання №2) Python</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+         <!-- LAB_8 -->
+         <div id="Lab_8">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_8_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_8_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_8_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_8_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_8_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_8_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_8_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_8_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №8</h1>
+                <div class="section" id = "Lab_8_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Ознайомитися з особливостями посилальних типів даних;</h3></li>
+                            <li><h3>Опанувати технологію застосування посилальних типів даних;</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням посилальних типів даних</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_8_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">
+                                <ul style="list-style:decimal">
+                                    <font class="pointer" color =red>*</font>  Розробити програму, команди меню якої передбачають такі дії:
+                                    <li style = "margin:15px 0;">Згенерувати дві розріджені матриці довільної вимірності, кількість нульових елементів яких більше за 60%. Збереження кожної матриці в оперативній пам'яті здійснити в рядковому форматі CRS (СSR) у вигляді трьох одновимірних масивів: AN зберігає значення ненульових елементів в кількості NNZ , JA зберігає номери стовпців з ненульовими елементами матриці в кількості NNZ, IA має по одному елементу на рядок матриці і кодує індекс ненульового елемента в AN , з якого починається даний рядок. (Він може містити додатковий кінцевий елемент, для якого встановлено значення NNZ).</li>
+                                    <li style = "margin:15px 0;">Вивести матриці на екран по рядках та стовпцях.</li>
+                                    <li style = "margin:15px 0;">Вивести на екран одновимірні масиви, що зберігають розріджені матриці.</li>
+                                    <li style = "margin:15px 0;">Визначити суму двох матриць за алгоритмом розріджених матриць</li>
+                                    <li style = "margin:15px 0;">Визначити суму двох матриць, застосовуючи стандартний алгоритм роботи з матрицями.</li>
+                                    <li style = "margin:15px 0;">Порівняти час виконання операцій і обсяг пам'яті при використанні цих двох алгоритмів</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_8_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання даного завдання ми будемо притримуватися наведенного нам алгоритму</li>
+                            <li>Перш за все створемо меню, для того щоб , користувач міг користуватися ним більше 1 разу , будемо викоритовувати goto в С++ для цього.</li>
+                            <li>Також буде доцільно перевіряти чи була створена матриця до того , як виконувати певні дії з меню</li>
+                            <li>Також нам потрібно утворити саме розріджену матрицю , тому будемо використовувати функцію <font class="pointer" color  = red >rand</font> , а також лічильник максимально допустимих ненульових елементів</li>
+                            <li>Нам потрібно зберігати матрицю у форматі CRS (тобто сберігати її певні параметри у 3х одновимірних масивах)</li>
+                            <li>Дані масиви будуть векторами , тобто динамічними масивами </li>
+                            <li>За умовою ми повинні вивести матриці , тобто використовуючи 3 одновимірних масива ми повині сгенерувати матриці, для цього ми будемо використовувати цикли , а також введемо у функцію певні лічильники , щоб відстежувати на якому елементі ми знаходимося</li>
+                            <li>Знаходження суми у алгоритмі розріджених матриць - тобто ми знаходимо суму , використовуючи 3 масиви (формат CRS) , і за допомогою певних функцій знаходимо суму відповідних елементів матриць</li>
+                            <li>Стандартне сумування - перетворення з формату CRS в двовимырний динамічний масив і знаходження суми за допомогою циклу</li>
+                            <li>За допомогою класу <font class="pointer" color = red>clock_t</font> а також методу <font class="pointer" color = red>sizeof()</font> знаходио час виконання і кількість задіяної пам'яті відповідно у стандартному сумуванні і сумуванні за розрідженими матрицями</li>
+                        </ul>
+                        <div class="small-section toCenter" >
+                            <img src="Images/Lab_8/lab_8_task_condition_1.png" style="width:50% ; margin:50px 0;" alt="Condition_8_1">
+                            <img src="Images/Lab_8/lab_8_task_condition_1_2.png" style="width:50% ; margin:50px 0;" alt="Condition_8_1">
+                        </div>
+                        <div class="small-section toCenter" style = "border-top:5px solid #000;">
+                            <img src="Images/Lab_8/lab_8_task_condition_1_3.png"  style="width:50% ; margin:50px 0;" alt="Condition_8_1">
+                            <img src="Images/Lab_8/lab_8_task_condition_1_4.png"  style="width:50% ; margin:50px 0;" alt="Condition_8_1">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section" id = "Lab_8_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку програми : </h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_8.png" alt="Scheme_8">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id = "Lab_8_code">
+                    <h2>Код програми :</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_8/lab_8_code_task_1_1.png" alt="Code task 1-1">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_8_code_download',showUp('Lab_8_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_8_result">
+                    <h2>Результати завдання :</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_8/lab_8_result_task_1_1.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_8/lab_8_result_task_1_2.png" style="width : 80%" alt="2">
+                        <img src="Images/Lab_8/lab_8_result_task_1_3.png" style="width : 80%" alt="3">
+                        <img src="Images/Lab_8/lab_8_result_task_1_4.png" style="width : 80%" alt="4">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_8_result_analis">
+                    <h2>Аналіз достовірності результатів</h2>
+                    <div class = "font18 small-section">
+                        <h3 class = "small-section">Аналізуючи вихідні результати (вище) і порівнюючи їх з умовою завдання. Ми можемо сказати , що програма працює коректно. Також це можна підтвертиди методом підстановки , при сумі матриць (пункт 4 , 5)</h3> 
+                    </div>
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_8_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написана програма : <br><br>  Вона генурує дві розрідженні матриці у форматі <font class="pointetr" color = red>CRS</font> , знаходить суму двома методами , та порівнює затрадженні ресурси на кожен с цих метоів</li>
+                        <li>Результати виконання були перевірені підстановкою значень;</li>
+                        <li>Програми працюють правильно, результати виконання перевірені і є коректними, отже їм можна довіряти і користуватися ними</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-8 -->
+        <div id="Lab_8_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_8_aim', showUp('Lab_8')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_8_task', showUp('Lab_8')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_8_analis', showUp('Lab_8')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_8_scheme', showUp('Lab_8')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_8_code', showUp('Lab_8')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_8_result', showUp('Lab_8')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_8_result_analis', showUp('Lab_8')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_8_result_conclusion',  showUp('Lab_8')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_08_31102021/lab_08_31102021_task/lab_08_31102021_task/lab_08_31102021_task.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        <!-- LAB_9 -->
+        <div id="Lab_9">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_9_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_9_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_9_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_9_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_9_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_9_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_9_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_9_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №9</h1>
+                <div class="section" id = "Lab_9_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Ознайомитися з особливостями рядків;</h3></li>
+                            <li><h3>Опанувати технологію застосування рядків;</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням рядків</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_9_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання №1</h3>
+                        <div class = "font18">
+                            <p class="small-section">
+                                <ul style="list-style:decimal">
+                                    3.1. Увести рядок алфавітних та цифрових символів. Алфавітні символи мають бути у верхньому та нижньому регістрах. Передбачити меню для виконання таких дій:
+                                    <li style = "margin:15px 0;"> Видалити з рядка символи, що стоять на парних позиціях у вхідному рядку, записавши їх у новий рядок.</li>
+                                    <li style = "margin:15px 0;"> Подвоїти усі алфавітні символи, що введені у верхньому регістрі;</li>
+                                    <li style = "margin:15px 0;"> Кожний цифровий символ, який в числовому еквіваленті є парним числом, замінити на цифрові символи, які в числовому еквіваленті помножені на 2. Кожний цифровий символ, який в числовому еквіваленті є непарним числом, замінити на підрядок " IPZXX ", де ХХ - номер групи. Символи, що не підлягають заміні, зберігаються.</li>
+                                    Вивести на екран усі перетворення рядка. <br> <font class="pointer">Контрольний тест.</font> <br>
+                                    Уведений рядок "1Milk_ 23bReaD cO4ffee568". Результат замін: 1Milk_ 23bReaD cO4ffee568 -> 1ik 3Ra Ofe58-> 1ik 3RRa OOfe5->IPZXX ik IPZXX RRa OOfe IPZXX 16
+                                </ul>
+                            </p>
+                        </div>
+                          <!-- Task #2 -->
+                          <h3>Завдання №2</h3>
+                          <div class = "font18 small-section">
+                            <p class = "small -">3.2. По каналу зв'язку передається повідомлення, що має вигляд послідовності символів з нулів і одиниць. Через перешкоди зв'язку можливий помилковий прийом деяких сигналів: нуль може бути сприйнятий як одиниця і навпаки. Для підвищення надійності правильного прийому сигналів кожен сигнал передається тричі. Тепер передавач замість одної '1' завжди передає "111", а замість '0' завжди "000". Увести рядок символів з нулів і одиниць. Врахувати, що кількість послідовних нулів і одиниць, що йдуть поспіль, не обов'язково введені трійками символів. Необхідно відновити вхідне повідомлення.</p>
+                          </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_9_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання завдання будемо записусати символи до <font class="pointer">string</font>, таким чином зберігаючи рядок для подальших операцій </li>
+                            <li>Для видалення символів, що стоять на парних позиціях ми будемо , брати по кожному символу і перевіряти їх індекса позиції на кратність 2 (якщо не кратне двом записуємо до нового масиву символів)</li>
+                            <li>Щоб подвоюати всі символи в верхньому регістрі , ми будемо перевіряти самі символи на регістр, чи є символ числом , або чи є символ пробілом , використовуючи такі функції : <font class="pointer">_islowe(), isdigit(), isspace()</font>, відповідно. Якщо всі функції повертають False , то ми подвоюємо символи</li>
+                            <li>Для того щоб замінити всі числові символи , ми перш за всу бедемо перевіряти чи є вони числами , далі за допомогою функці <font class="pointer">_itoa</font> будемо переводити число в символьний формат та перезаписувати їх. Якщо число кратне 2, то ми записуємо подвоєне число до масиву символів , якщо ж число непарне , то ми замість нього записуємо <font class="pointer" color = red>IPZ11</font> </li>
+                            <li>Виводимо результати у вигляді перетвореного речення , за певними умовами, що були надані раніше</li>
+                        </ul>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №2: </h3>
+                        <ul  class = "font18">
+                            <li>Для виконання завдання №2 ми будемо за допомогою циклу перевіряти , чи є символ на перевірці якого ми зупинилися і 2 послідуючих симовли рівними. У випадку їх рівності ми записуємо даний символ переходячи на три позиції вперед. В іншому випадку переходимо на 1 позицію, і записємо символи в новоутворений масив символів</li>
+                            <li>Також нам слід перевірити перед вище вказаним алгоритмом що нам надали саме бінарний код , тобто ми просто за допомогою циклу перевіряємо по кожному символу чи є наш символ 1 або 0 , в іншому випадку програма виводить , що це не є бінарним кодом і просить ввести новий ще раз</li>
+                            <li>Так як це "шифр" , то нам також треба розшифрувати його , для цього за допомогою циклу ми йдемо по строці с початку , і у випадку коли символ дорівнює 1 , ми додаємо до суми , 2 в степені , яка дорівнює позиції тієї одиниці <font class="pointer">01: ( 0*2^1 + 1*2^0 = 1)</font></li>
+                            <li>Виводимо два результати : сам перетворений д коректного бінарний код (без повторень 3 однакових символів) та значення даного бінарного кода у 10-ій системі</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="section" id = "Lab_9_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку програми : </h2>
+                    <h2>Завданян №1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_9_1.png" alt="Scheme_9_1">
+                        </div>
+                    </div>
+                    <h2>Завданян №2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_9_2.png" alt="Scheme_9_2">
+                        </div>
+                    </div>
+ 
+                </div>
+
+                <div class="section" id = "Lab_9_code">
+                    <h2>Код програми :</h2>
+                    <!-- code section #1 -->
+                    <h2>Завдання №1</h2>
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_9/lab_9_code_task_1_1.png" alt="Code task 1-1">
+                    </div>
+                    <h2>Завдання №2</h2>
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_9/lab_9_code_task_2_1.png" alt="Code task 2-1">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_9_code_download',showUp('Lab_9_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_9_result">
+                    <h2>Результати завдання :</h2>
+                    <!-- Task #1 -->
+                    <h2>Завдання №1</h2>
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_9/lab_9_result_task_1_1.png" style="width : 80%" alt="1">
+                    </div>
+                    <!-- Task #2 -->
+                    <h2>Завдання №2</h2>
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_9/lab_9_result_task_2_1.png" style="width : 80%" alt="2">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_9_result_analis">
+                    <h2>Аналіз достовірності результатів завдання №1</h2>
+                    <div class = "font18 small-section">
+                        <h3 class = "small-section">Як ми можемо побачити, якщо ми введемо контрольний тест , то отримаємо  резуьтат, що співіпадає з наведеним в контрольному тесті, тому програма працює <font class="pointer" color = red>коректно</font></h3> 
+                        <div class="toCenter">
+                            <img src="Images//Lab_9/lab_9_result_task_1_1.png"  style = "width:60%;" alt="Analis 1">
+                            <img src="Images/Lab_9/lab_9_result_analis_1_1.png" style = "width:40%;" alt="Analis 1">
+                        </div>
+                    </div>
+                    <h2>Аналіз достовірності результатів завдання №2</h2>
+                    <div class = "font18 small-section">
+                        <h3 class = "small-section">Як ми можемо побачити, програма спрощує введений бінарний код, а також перетворює його правильно в 10ну систему , тому програма працює <font class="pointer" color = red>коректно</font></h3> 
+                        <div class="toCenter">
+                            <img src="Images//Lab_9/lab_9_result_task_2_1.png"  style = "width:50%;" alt="Analis 2">
+                            <img src="Images/Lab_9/lab_9_result_analis_2_1.png" style = "width:50%;" alt="Analis 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_9_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написані 2 програми : <br><br>1) Перша - програма виконує певні операції на реченням,  перетворюючи його , по заданим алгоритмам , які наведені в умові. <br> 2) Друга - програма спрощує бінарний код та переводить його в 10ну систему</li>
+                        <li>Результати виконання були перевірені підстановкою значень , а також за допомогою онлайн калькулятора;</li>
+                        <li>Програми працюють правильно, результати виконання перевірені і є коректними, отже їм можна довіряти і користуватися</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-8 -->
+        <div id="Lab_9_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_9_aim', showUp('Lab_9')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_9_task', showUp('Lab_9')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_9_analis', showUp('Lab_9')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_9_scheme', showUp('Lab_9')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_9_code', showUp('Lab_9')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_9_result', showUp('Lab_9')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_9_result_analis', showUp('Lab_9')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_9_result_conclusion',  showUp('Lab_9')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task #1 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_09_09112021/Lab_09_09112021/Lab_09_09112021_task_1/Lab_09_09112021_task_1.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class="code-section">
+                        <h2> Task #2 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_09_09112021/Lab_09_09112021/Lab_09_09112021_task_2/Lab_09_09112021_task_2.cpp"> Завантажити файл (завдання №2) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #1 PY -->
+                    <div class="code-section">
+                        <h2> Task #1 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_09_09112021/Lab_09_09112021_python/lab_09_09112021/lab_09_09112021_task_1/lab_09_09112021_task_1.py"> Завантажити файл (завдання №1) Python</a>
+                        </div>
+                    </div>
+                    <!-- Task #2 PY -->
+                    <div class="code-section">
+                        <h2> Task #2 Python</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_09_09112021/Lab_09_09112021_python/lab_09_09112021/lab_09_09112021_task_2/lab_09_09112021_task_2.py"> Завантажити файл (завдання №2) Python</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+         <!-- LAB_10 -->
+         <div id="Lab_10">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_10_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_10_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_10_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_10_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_10_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_10_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_10_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_10_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №10</h1>
+                <div class="section" id = "Lab_10_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Ознайомитися з особливостями структур;</h3></li>
+                            <li><h3>Опанувати технологію застосування структу;</h3></li>
+                            <li><h3>Навчитися розробляти алгоритми та програми із застосуванням структур</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_10_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <h3>Завдання</h3>
+                        <div class = "font18">
+                            <p class="small-section">
+                                <ul style="list-style:decimal">
+                                    Створити масив структур. Кожна структура складається з таких елементів: фірма, вакантна посада, кількість вакантних місць, вимоги до претендентів на кожну посаду, заробітна платня. Реалізувати запити:
+                                    <li>визначити фірми з найбільшою кількістю вакансій на задану посаду;</li>
+                                    <li>вивести список вимог до кандидатів на задану посаду по кожній фірмі;</li>
+                                    <li>створити новий масив із структурою: вакантна посада, заробітна платня. Вакансії вибирати з початкового масиву, виключаючи повторення однакових вакантних посад. На випадок різної платні на однакових посадах у різних фірмах включити у масив середню заробітну платню.</li>
+                                    <br>Результати запитів вивести у вигляді таблиць
+                                </ul>
+                            </p>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_10_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Так як ми будемо працювати з великими масивами даних , то будемо використовувати масив структур (так як ми будемо працювати з об'єктами)</li>
+                            <li>Так як кількість елементів за раній час невідома, то буде доречно використовувати показчики</li>
+                            <li>Створимо структуру зі всіма параметрами , що вказані в умові завдання</li>
+                            <li>Для визначення фірм з найбільшою кількістю вакансій ми будемо використовувати пошук по строці (перевіряти по символам)</li>
+                            <li>Задопомогою циклів мо знаходимо половину об'єктів з найбільшою кількістю вакансій по заданому пошуку професії</li>
+                            <li>Таким же чином ми знайдемо всі об'єкти , професії яких є ті ,що були задані користувачем та виводимо всі вимоги кожної компанії по заданій професії</li>
+                            <li>Для виконання останньої умови , ми будемо утворювати нову структуру (Вакансія) , куда ми будемо записувати 2 елементи : назва професії , що є вакантна та середня заробітня плата.</li>
+                            <li>Для знаходження середньої плати ми будемо використовувати знову ж за допомогою пошуку по назві професії</li>
+                            <li>Також будемо використовувати цикл для надання користувачу можливості виконувати в програмі більше 1 операції з пункту умови.</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="section" id = "Lab_10_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку програми : </h2>
+                    <h2>Завданян</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_10.png" alt="Scheme_10">
+                        </div>
+                    </div>
+ 
+                </div>
+
+                <div class="section" id = "Lab_10_code">
+                    <h2>Код програми :</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_10/lab_10_code_task.png" alt="Code task 1-1">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_10_code_download',showUp('Lab_10_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_10_result">
+                    <h2>Результати завдання :</h2>
+                    <!-- Task #1 -->
+                    <h2>Завдання</h2>
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_10/lab_10_result_task_1_1.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_10/lab_10_result_task_1_2.png" style="width : 80%" alt="1">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_10_result_analis">
+                    <h2>Аналіз достовірності результатів завдання №1</h2>
+                    <div class = "font18 small-section">
+                        <h3 class = "small-section">Як ми можемо побачити з вихідних вище результатів , що програма виконує всі функції , що були наведені в завданні , тому можемо зробити висновок , що програма працює <font class="pointer" color = red>коректно</font></h3> 
+                    </div>
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_10_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написана програма : <br><br>Дана програма утворює "базу даних" об'єктів по темі вакансій і робить певні пошукові дії з даними об'єктами</li>
+                        <li>Результат виконання були перевірені підстановкою значень </li>
+                        <li>Програма працюює правильно, результати виконання перевірені і є коректними, отже їй можна довіряти і користуватися</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-10 -->
+        <div id="Lab_10_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_10_aim', showUp('Lab_10')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_10_task', showUp('Lab_10')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_10_analis', showUp('Lab_10')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_10_scheme', showUp('Lab_10')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_10_code', showUp('Lab_10')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_10_result', showUp('Lab_10')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_10_result_analis', showUp('Lab_10')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_10_result_conclusion',  showUp('Lab_10')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task #1 C++</h2>
+                        <div class="toCenter"1
+                            <a class = "code__download" href="Labs/Lab_10_10112021/lab_10_12112021/lab_10_12112021_task_1/lab_10_12112021_task_1.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- LAB_11 -->
+        <div id="Lab_11">
+            <div class = "main">
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_11_aim'">Мета</li>
+                            <li onclick="window.location.href = '#Lab_11_task'">Умова </li>
+                            <li onclick="window.location.href = '#Lab_11_analis'">Аналіз </li>
+                            <li onclick="window.location.href = '#Lab_11_scheme'">Блок-схема алогортмів</li>
+                            <li onclick="window.location.href = '#Lab_11_code'">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_11_result'">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_11_result_analis'">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_11_result_conclusion'">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1 class = "section">Лабораторна робота №11</h1>
+                <div class="section" id = "Lab_11_aim">
+                   <h2>Мета роботи:</h2>
+                    <p>
+                        <ul class = "aim-list">
+                            <li><h3>Вивчити особливості використання  текстових і бінарних файлів</h3></li>
+                            <li><h3>Навчитися застосовувати текстові та бінарні файли в  програмуванні</h3></li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="section" id = "Lab_11_task">
+                   <h2>Умова задачі</h2>
+                    <p>
+                        <!-- Task #1 -->
+                        <div class = "font18">
+                            <p class="small-section">
+                                <h3>Завдання 1</h3>
+                                <ul style="list-style:decimal" class = "small-section">
+                                    Створити текстовий файл, рядки якого містить цифри i символи. Виконати такі дії:
+                                    <li>В кожному рядку текстового файлу визначити найбільшу послідовність цифр, що йдуть поспіль.</li>
+                                    <li>Записати довжину знайденої послідовності на початок кожного рядку, які зберігти у новому текстовому файлі.</li>
+                                </ul>
+                            </p>
+                        </div>
+                         <!-- Task #2  -->
+                         <div class = "font18">
+                             <p class="small-section">
+                                <h3>Завдання 2</h3>
+                                <ul style="list-style:decimal" class = "small-section">
+                                    Створити масив структур. Кожна структура складається з таких елементів: фірма, вакантна посада, кількість вакантних місць, вимоги до претендентів на кожну посаду, заробітна платня. Створений масив структур записати до бінарного файла. Виконати такі операції з бінарним файлом:
+                                     <li>Доповнити бінарний файл новими записами,</li>
+                                     <li>Замінити вибраний користувачем запис в бінарному файлі на новий, значення полів якого ввести з клавіатури,</li>
+                                     <li>Видалити з бінарного файлу вибраний користувачем запис</li>
+                                </ul>
+                                 <ul style="list-style:decimal" class = "small-section">
+                                     Здійснити пошук в бінарному файлі та вивести у вигляді таблиць:
+                                     <li>Визначити фірми з найбільшою кількістю вакансій на задану посаду;</li>
+                                     <li>Вивести список вимог до кандидатів на задану посаду по кожній фірмі;</li>
+                                     <li>Створити новий масив із структурою: вакантна посада, заробітна платня. Вакансії вибирати з початкового масиву, виключаючи повторення однакових вакантних посад.</li>    
+                                </ul>
+                             </p>
+                         </div>
+                    </p>
+                </div>
+                
+                <div class="section" id = "Lab_11_analis">
+                    <h2>Аналіз задач</h2>
+                    <!-- Task #1 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №1: </h3>
+                        <ul  class = "font18">
+                            <li>Утворюємо звичайний текстовий файл , в який ми будемо робити записи</li>
+                            <li>Створення відбувається через код , тобто якщо файл існує , то він не буде утворюватися повторно , якщо ж ні - то утвориться</li>
+                            <li>Далі , зчитуючи символи файлу по 1 елементу  , ми знаходимо найбільшу послідовність в кожній строці з чисел  , записуючи її в масив на зберігання</li>
+                            <li>Далі на початок кожної строки відбовідаємо відповідні значення довжин послідовностей , зберігаючи їх в новий файл</li>
+                            <li>Демонструємо що у результаті записано в іншому файлі</li>
+                        </ul>
+                    </div>
+                    <!-- Task #2 -->
+                    <div class = "small-section">
+                        <h3>Аналіз завдання №2: </h3>
+                        <ul  class = "font18">
+                            <li>Утворюємо звичайний текстовий файл , в який ми будемо робити записи</li>
+                            <li>Створення відбувається через код , тобто якщо файл існує , то він не буде утворюватися повторно , якщо ж ні - то утвориться</li>
+                            <li>Питаємл користувача чи бажає він дозаповнити файл певною інформацією</li>
+                            <li>Якщо так то утворюємо , структуру яку заповнює користувач або програма</li>
+                            <li>Далі пропонуємо йому меню , яке було вказано в умові</li>
+                            <li>Якщо користувач обирає "дозапис" , то програма дозапише до файлу всі структури , що були утворені користувачем</li>
+                            <li>Якщо користувач обирає зміну певної строки , то програма , попросить користувача ввести індекс строки , яку будуть редагувати та нові її значення</li>
+                            <li>У випадку ж видалення , користувачеві буде необхідно увести індекс строки , що будуть видаляти</li>
+                            <li>Далі по закінченню користувача роботи з першим меню , він перейде до наступного</li>
+                            <li>Далі відповідно до другого меню :</li>
+                            <li>Якщо користувач обере перший пункт , то програма попросить його ввести назву професії яку він бажає знайти і виведе список найбільшої кількості місць у фірмах </li>
+                            <li>Якщо пункт 2 - то  програма також попросить ввести назву професії , і програма випише всі об'єкти з даною професією та іншою інформацією</li>
+                            <li>Якщо пункт 3 - то програма виведе всі професії , що зберігаються у файлі і середню заробітню плату по всім даним професіям</li>
+                            <li>В іншому випадку програма завершує роботу</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="section" id = "Lab_11_scheme">
+                    <!-- Task #1 -->
+                    <h2>Блок-схема розв'язку програми : </h2>
+                    <h2>Завдання 1</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_11_1.png" alt="Scheme_11">
+                        </div>
+                    </div>
+                    <h2>Завдання 2</h2>
+                    <div class="toCenter">
+                        <div class = "block__section">
+                            <img src="block-schemes/block-schemes_11_2.png" alt="Scheme_11">
+                        </div>
+                    </div>
+ 
+                </div>
+
+                <div class="section" id = "Lab_11_code">
+                    <h2>Код програми 1 :</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_11/lab_11_1_code_task.png" alt="Code task 1-1">
+                    </div>
+                    <h2>Код програми 2 :</h2>
+                    <!-- code section #1 -->
+                    <div class = "small-section">
+                        <img class = "codeImages" src="Images/Lab_11/lab_11_2_code_task.png">
+                    </div>
+                    <button class = "codeCopy" onclick = "window.location.href = '#Lab_11_code_download',showUp('Lab_11_code_download')">Завантажити код</button>
+                </div>
+
+                <!-- Showing up the results -->
+                <div class="section" id = "Lab_11_result">
+                    <h2>Результати завдання :</h2>
+                    <!-- Task #1 -->
+                    <h2>Завдання 1</h2>
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_11/lab_11_result_task_1_1.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_11/lab_11_result_task_1_2.png" style="width : 80%" alt="1">
+                    </div>
+                    <h2>Завдання 2</h2>
+                    <div class = "small-section toCenter">
+                        <img src="Images/Lab_11/lab_11_result_task_2_1.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_11/lab_11_result_task_2_2.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_11/lab_11_result_task_2_3.png" style="width : 80%" alt="1">
+                        <img src="Images/Lab_11/lab_11_result_task_2_4.png" style="width : 80%" alt="1">
+                    </div>
+                </div>
+
+                <!-- Analising the results of different tasks :  -->
+                <div class="section" id = "Lab_11_result_analis">
+                    <h2>Аналіз достовірності результатів завдання №1</h2>
+                    <div class = "font18 small-section">
+                        <h3 class = "small-section">Як ми можемо побачити з вихідних вище результатів , що програми виконують всі функції , що були наведені в завданнях , тому можемо зробити висновок , що програми працюють <font class="pointer" color = red>коректно</font></h3> 
+                    </div>
+                </div>
+
+                <!-- Conclusion :  -->
+                <div class="section" id = "Lab_11_result_conclusion">
+                    <h2 class = "margin20">Висновок </h2>
+                    <ul  class = "font18 small-section">
+                        <li>Було написані 2 програми по роботі с файлами </li>
+                        <li>Результат виконання були перевірені підстановкою значень </li>
+                        <li>Програми працюють правильно, результати виконання перевірені і є коректними, отже їм можна довіряти і користуватися</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>  
+
+
+        <!-- Code to Download (Copy) LAB-11 -->
+        <div id="Lab_11_code_download">
+            <div class = "main">
+                <!-- Menu to navigate from that file -->
+                <header>
+                    <nav>
+                        <ul>
+                            <li onclick="window.location.href = '#Lab_11_aim', showUp('Lab_11')">Мета</li>
+                            <li onclick="window.location.href = '#Lab_11_task', showUp('Lab_11')">Умова задачі</li>
+                            <li onclick="window.location.href = '#Lab_11_analis', showUp('Lab_11')">Аналіз задачі</li>
+                            <li onclick="window.location.href = '#Lab_11_scheme', showUp('Lab_11')">Блок-схема алогортму програми</li>
+                            <li onclick="window.location.href = '#Lab_11_code', showUp('Lab_11')">Код програми</li>
+                            <li onclick="window.location.href = '#Lab_11_result', showUp('Lab_11')">Вихідний результат</li>
+                            <li onclick="window.location.href = '#Lab_11_result_analis', showUp('Lab_11')">Аналіз достовірності результатів</li>
+                            <li onclick="window.location.href = '#Lab_11_result_conclusion',  showUp('Lab_11')">Висновки</li>
+                        </ul>
+                    </nav>
+                </header>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task #1 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_11_20112021/Lab_11_20112021/Lab_11_20112021_task_1/Lab_11_20112021_task_1.cpp"> Завантажити файл (завдання №1) C++</a>
+                        </div>
+                    </div>
+                    <!-- Task #1 -->
+                    <div class="code-section">
+                        <h2> Task #2 C++</h2>
+                        <div class="toCenter">
+                            <a class = "code__download" href="Labs/Lab_11_20112021/Lab_11_20112021/Lab_11_20112021_task_2/Lab_11_20112021_task_2.cpp"> Завантажити файл (завдання №2) C++</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+</body>
+<script>
+    var names  = ['info', 'Lab_1', 'Lab_1_code_download','Lab_2','Lab_2_code_download','Lab_3','Lab_3_code_download','Lab_4','Lab_4_code_download','Lab_5','Lab_5_code_download','Lab_6','Lab_6_code_download','Lab_7','Lab_7_code_download','Lab_8','Lab_8_code_download','Lab_9','Lab_9_code_download','Lab_10','Lab_10_code_download','Lab_11','Lab_11_code_download'];
+    function showUp(item){
+        for (let index = 0; index < names.length; index++) {
+            document.getElementById(names[index]).style.display = "none";            
+        }
+        document.getElementById(item).style.display = "flex";
+    }
+</script>
+
+
+</script>
+</html>

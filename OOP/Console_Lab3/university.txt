@@ -1,0 +1,6 @@
+ The university name: fdsfdsfdsfds
+ Its adress: dsfdsfdsfsdfs
+ Nomber of faculties: 444
+ Number of specialities: 7777
+ Total number of students: 88888
+ Its rate: 5

@@ -1,0 +1,7 @@
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\bin\Debug\Console_Lab4_Version_2.exe.config
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\bin\Debug\Console_Lab4_Version_2.exe
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\bin\Debug\Console_Lab4_Version_2.pdb
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\obj\Debug\Console_Lab4_Version_2.csproj.AssemblyReference.cache
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\obj\Debug\Console_Lab4_Version_2.csproj.CoreCompileInputs.cache
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\obj\Debug\Console_Lab4_Version_2.exe
+D:\OP\OOP\Console_Lab4\Console_Lab4_Version_2\obj\Debug\Console_Lab4_Version_2.pdb

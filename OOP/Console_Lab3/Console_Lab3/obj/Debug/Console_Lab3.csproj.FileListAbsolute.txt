@@ -1,0 +1,7 @@
+D:\OP\OOP\Console_Lab3\Console_Lab3\obj\Debug\Console_Lab3.csproj.AssemblyReference.cache
+D:\OP\OOP\Console_Lab3\Console_Lab3\obj\Debug\Console_Lab3.csproj.CoreCompileInputs.cache
+D:\OP\OOP\Console_Lab3\Console_Lab3\bin\Debug\Console_Lab3.exe.config
+D:\OP\OOP\Console_Lab3\Console_Lab3\bin\Debug\Console_Lab3.exe
+D:\OP\OOP\Console_Lab3\Console_Lab3\bin\Debug\Console_Lab3.pdb
+D:\OP\OOP\Console_Lab3\Console_Lab3\obj\Debug\Console_Lab3.exe
+D:\OP\OOP\Console_Lab3\Console_Lab3\obj\Debug\Console_Lab3.pdb

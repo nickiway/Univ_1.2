@@ -1,0 +1,4 @@
+ The faculty name: gfdgd
+ Number of cafedras: 555
+ Number of specialities: 555
+ Number of students: 777
