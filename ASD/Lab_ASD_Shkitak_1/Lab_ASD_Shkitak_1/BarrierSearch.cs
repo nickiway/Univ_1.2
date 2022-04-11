@@ -31,18 +31,12 @@ namespace Lab_ASD_Shkitak_1
 
         public static void Search(int key, int[] array)
         {
+            Array.Resize(ref array, array.Length + 1);
+            array[array.Length - 1] = key;
             int i = 0;
-            var newArray = new int[array.Length + 1];
-            while (i < array.Length)
-            {
-                newArray[i] = array[i];
+            while (array[i] != key )
                 i++;
-            }
-            newArray[i] = key;
-            i = 0;
-            while (newArray[i] != key )
-                i++;
-            if (i < array.Length)
+            if (i < array.Length - 1)
                 Console.WriteLine(i);
             else
                 Console.WriteLine("The object is not found");
