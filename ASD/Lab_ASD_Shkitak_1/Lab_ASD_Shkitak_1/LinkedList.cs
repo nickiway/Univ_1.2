@@ -15,7 +15,7 @@ namespace Lab_ASD_Shkitak_1
             Data = data;
             Next = next;
         }
-        public static LinkedList GetList(int[] array)
+        public static LinkedList SetList(int[] array)
         {
             int i = array.Length - 1;
             var last = new LinkedList(array[i], null);
@@ -27,7 +27,7 @@ namespace Lab_ASD_Shkitak_1
             }
             return last;
         }
-        public static LinkedList GetElement(LinkedList list, int position)
+        public static LinkedList GetItem(LinkedList list, int position)
         {
             for (int i = 0; i < position; i++)
                 list = list.Next;

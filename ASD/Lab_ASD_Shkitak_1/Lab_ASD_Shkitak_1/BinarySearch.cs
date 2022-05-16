@@ -28,7 +28,7 @@ namespace Lab_ASD_Shkitak_1
             Console.WriteLine("WARNING! The array will be sorted in order to use the binnary search method!");
             var sortedArray = (int[])array.Clone();
             BubbleSort(ref sortedArray);
-            var sortedListHead = LinkedList.GetList(sortedArray);
+            var sortedListHead = LinkedList.SetList(sortedArray);
             Console.WriteLine("The sorted array:");
             OutputInput.PrintArray(sortedArray);
 
@@ -73,31 +73,41 @@ namespace Lab_ASD_Shkitak_1
 
         public static void Search(int key, LinkedList head, bool isGoldenRatio)
         {
-            int minIndex = 0, maxIndex = LinkedList.GetLength(head), midIndex = 0;
-            LinkedList minNode = head, maxNode = null, midNode = null;
-
-            double lambda = (Math.Sqrt(5) + 1) / 2;
-            double ratio = isGoldenRatio ? 1 + lambda : 2;
-            double multiplayer = isGoldenRatio ? lambda : 1;
-            while (maxNode == null || minNode.Data != maxNode.Data)
+            int indexLeft = 0, indexRight = LinkedList.GetLength(head), indexMiddle = 0;
+            LinkedList nodeLeft = head, nodeRight = null, nodeMiddle = null;
+            double goldenration = (Math.Sqrt(5) + 1) / 2;
+            double lambda;
+            if (isGoldenRatio)
             {
-                midIndex = (int)((minIndex + multiplayer * maxIndex) / ratio);
-                midNode = LinkedList.GetElement(minNode, midIndex - minIndex);
-                if (key < midNode.Data)
+                lambda = goldenration;
+            }
+            else
+            {
+                lambda = 1;
+            }
+            while (nodeRight == null || nodeLeft.Data != nodeRight.Data)
+            {
+                indexMiddle = (int)((indexLeft + lambda * indexRight) / (1 + lambda));
+                nodeMiddle = LinkedList.GetItem(nodeLeft, indexMiddle - indexLeft);
+                if (key > nodeMiddle.Data)
                 {
-                    maxNode = midNode;
-                    maxIndex = midIndex;
+                    indexLeft = indexMiddle + 1;
+                    nodeLeft = nodeMiddle.Next;
                 }
                 else
                 {
-                    minNode = midNode.Next;
-                    minIndex = midIndex + 1;
+                    indexRight = indexMiddle;
+                    nodeRight = nodeMiddle;
                 }
             }
-            if (midNode.Data == key)
-                Console.WriteLine(midIndex);
+            if (key == nodeRight.Data)
+            {
+                Console.WriteLine(indexRight + 1);
+            }
             else
-                Console.WriteLine("The object is not found");
+            {
+                Console.WriteLine("Not found");
+            }
         }
     }
 }

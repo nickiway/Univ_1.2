@@ -1,0 +1,7 @@
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\bin\Debug\Pilse_task.exe.config
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\bin\Debug\Pilse_task.exe
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\bin\Debug\Pilse_task.pdb
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\obj\Debug\Pilse_task.csproj.AssemblyReference.cache
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\obj\Debug\Pilse_task.csproj.CoreCompileInputs.cache
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\obj\Debug\Pilse_task.exe
+D:\KNU_Kurs_1\ASD\Piles_ASD_task\Pilse_task\Pilse_task\obj\Debug\Pilse_task.pdb

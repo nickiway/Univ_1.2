@@ -74,7 +74,7 @@ namespace Lab_ASD_Shkitak_1
         {
             Console.WriteLine("Please, enter an integer array to search in");
             array = GetArray();
-            list = LinkedList.GetList(array);
+            list = LinkedList.SetList(array);
         }
         public static void GenerateCondition(out int startPostion, out int endPostion, out int quatnity)
         {
@@ -90,7 +90,7 @@ namespace Lab_ASD_Shkitak_1
             int startPostion,  endPostion,  quatnity;
             GenerateCondition(out startPostion, out endPostion, out quatnity);
             array = Generate(startPostion, endPostion, quatnity).ToArray();
-            list = LinkedList.GetList(array);
+            list = LinkedList.SetList(array);
         }
         public static void PrintArray(int[] array)
         {
